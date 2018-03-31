@@ -8,6 +8,8 @@ import BasicInfo from './BasicInformation/Main'
 import DividingLine from './DividingLine'
 import BriefTable from './BriefIntroductionTable'
 import SkillTable from "./SkillChart/main"
+import SkillBar from "./SkillPoint/main"
+import Github from "./OpenSourceActivity/main"
 
 export default class MainView extends PureComponent {
     render() {
@@ -24,6 +26,10 @@ export default class MainView extends PureComponent {
                     <DividingLine name={"like"} title={"技能专长"}/>
                     <SkillTable/>
                     <DividingLine name={"star"} title={"技能评价"}/>
+                    <SkillBar/>
+                    <DividingLine name={"social-github"} title={"社区经验"}/>
+                    <Github/>
+                    <DividingLine name={"lightbulb"} title={"个人经验"}/>
                 </ScrollView>
             </View>
         )

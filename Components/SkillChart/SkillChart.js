@@ -1,12 +1,13 @@
 import React, { PureComponent } from 'react'
 import {
     View,
-    StyleSheet
+    StyleSheet,
+    Text
 } from 'react-native'
 import { PieChart } from 'react-native-svg-charts'
 import PropTypes from 'prop-types'
 import { TitleColors } from '../../Util/ProjectColors'
-import {remToPixel} from "../../Util/Convertor"
+import { remToPixel, equalSize } from "../../Util/Convertor"
 
 export default class SkillChart extends PureComponent {
 
@@ -20,7 +21,7 @@ export default class SkillChart extends PureComponent {
         const pieData = [point, 100-point].map((value, index) => ({
                 value,
                 svg:{
-                    fill: index === 0 ? TitleColors.H1TitleColor : TitleColors.H2TitleColor
+                    fill: index === 0 ? TitleColors.H2TitleColor : TitleColors.H3TitleColor
                 },
                 key: `pie-${index}`
         }))
@@ -28,20 +29,42 @@ export default class SkillChart extends PureComponent {
             <PieChart
                 data={pieData}
                 style={Styles.pie}
-                spacing={0}
-                outerRadius={'95%'}
+                spacing={10}
+                outerRadius={'70%'}
+                innerRadius={'95%'}
             />
+            <View style={Styles.label}>
+                <Text style={Styles.skill}>{title}</Text>
+                <Text style={Styles.point}>{point}</Text>
+            </View>
         </View>)
     }
 }
 
 const Styles = StyleSheet.create({
     main: {
-        flex:1,
-        marginVertical: remToPixel(3*1.25)
+        marginTop: remToPixel(3*1.25)
     },
     pie: {
-        width: 100,
-        height: 100
-    }
+        width: equalSize(20,2),
+        height: equalSize(20,2)
+    },
+    label:{
+        position: 'absolute',
+        top: equalSize(20,2)/2-remToPixel(1.6*0.8),
+        left: 44,
+        width:equalSize(20,2)/2
+    },
+    skill:{
+        color: TitleColors.VerticalSeparatorColor,
+        lineHeight: remToPixel(1.6),
+        textAlign:'center',
+        width:equalSize(20,2)/2
+    },
+    point:{
+        color: TitleColors.H2TitleColor,
+        lineHeight: remToPixel(1.6*0.8),
+        textAlign:'center',
+        width:equalSize(20,2)/2
+    },
 })
