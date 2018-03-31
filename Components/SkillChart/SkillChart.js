@@ -52,19 +52,18 @@ const Styles = StyleSheet.create({
     label:{
         position: 'absolute',
         top: equalSize(20,2)/2-remToPixel(1.6*0.8),
-        left: 44,
-        width:equalSize(20,2)/2
+        width:equalSize(20,2),
     },
     skill:{
         color: TitleColors.VerticalSeparatorColor,
         lineHeight: remToPixel(1.6),
         textAlign:'center',
-        width:equalSize(20,2)/2
+        width:equalSize(20,2)
     },
     point:{
         color: TitleColors.H2TitleColor,
         lineHeight: remToPixel(1.6*0.8),
         textAlign:'center',
-        width:equalSize(20,2)/2
+        width:equalSize(20,2)
     },
 })
