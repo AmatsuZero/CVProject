@@ -5,6 +5,9 @@ import {
     View
 } from 'react-native'
 import BasicInfo from './BasicInformation/Main'
+import DividingLine from './DividingLine'
+import BriefTable from './BriefIntroductionTable'
+import SkillTable from "./SkillChart/main"
 
 export default class MainView extends PureComponent {
     render() {
@@ -16,6 +19,11 @@ export default class MainView extends PureComponent {
                     alwaysBounceVertical={true}
                 >
                     <BasicInfo/>
+                    <DividingLine name={"torso"} title={"个人简介"}/>
+                    <BriefTable/>
+                    <DividingLine name={"like"} title={"技能专长"}/>
+                    <SkillTable/>
+                    <DividingLine name={"star"} title={"技能评价"}/>
                 </ScrollView>
             </View>
         )

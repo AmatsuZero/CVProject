@@ -31,7 +31,7 @@ export default class Main extends PureComponent {
                </Text>
                <ContactMe/>
                <TouchableOpacity style={Styles.downloadButton} onPress={this.download}>
-                   <Icon name="arrow-down" fontSize={14} color={TitleColors.H3TitleColor}/>
+                   <Icon name="arrow-down" size={remToPixel(1.25)} color={TitleColors.H3TitleColor}/>
                    <Text style={Styles.button}>
                        下载
                    </Text>
@@ -51,8 +51,7 @@ const Styles = StyleSheet.create({
         fontSize: remToPixel(1.6875),
         fontWeight: '300',
         color: TitleColors.H1TitleColor,
-        marginBottom:remToPixel(0.5),
-        fontFamily:'sans-serif'
+        marginBottom:remToPixel(0.5)
     },
     titleDescription: {
         color: TitleColors.H2TitleColor,
@@ -63,10 +62,11 @@ const Styles = StyleSheet.create({
         alignSelf: 'flex-end',
         flexDirection:'row',
         alignItems: 'center',
-        justifyContent:'space-around'
+        justifyContent:'space-between'
     },
     button:{
-        fontSize:remToPixel(1.25),
-        color: TitleColors.H3TitleColor
+        fontSize:remToPixel(1.2),
+        color: TitleColors.H3TitleColor,
+        paddingLeft: 4
     }
 })
