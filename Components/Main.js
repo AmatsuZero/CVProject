@@ -1,18 +1,23 @@
-import React, { PureComponent } from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
+import React, {PureComponent} from 'react'
+import {
+    ScrollView,
+    StyleSheet,
+    View
+} from 'react-native'
 import BasicInfo from './BasicInformation/Main'
 
 export default class MainView extends PureComponent {
     render() {
         return (
-            <ScrollView
-                style={Styles.main}
-                contentContainerStyle={Styles.contentContainer}
-                snapToAlignment={'center'}
-                alwaysBounceVertical={true}
-            >
-                <BasicInfo/>
-            </ScrollView>
+            <View>
+                <ScrollView
+                    style={Styles.main}
+                    contentContainerStyle={Styles.contentContainer}
+                    alwaysBounceVertical={true}
+                >
+                    <BasicInfo/>
+                </ScrollView>
+            </View>
         )
     }
 }

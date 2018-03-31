@@ -2,16 +2,24 @@ import React, { PureComponent } from 'react'
 import {
     Text,
     StyleSheet,
-    View
+    View,
+    TouchableOpacity
 } from 'react-native'
 import { TitleColors } from '../../Util/ProjectColors'
 import { remToPixel } from '../../Util/Convertor'
 import ContactMe from './ContactInfo'
+import Icon from 'react-native-vector-icons/Foundation'
 
 export default class Main extends PureComponent {
-   componentDidMount() {
+   constructor() {
+       super()
+       this.download = this.download.bind(this)
+   }
+
+   download() {
 
    }
+
    render() {
        return (
            <View style={Styles.main}>
@@ -22,6 +30,12 @@ export default class Main extends PureComponent {
                    全端开发
                </Text>
                <ContactMe/>
+               <TouchableOpacity style={Styles.downloadButton} onPress={this.download}>
+                   <Icon name="arrow-down" fontSize={14} color={TitleColors.H3TitleColor}/>
+                   <Text style={Styles.button}>
+                       下载
+                   </Text>
+               </TouchableOpacity>
            </View>
        )
    }
@@ -30,17 +44,29 @@ export default class Main extends PureComponent {
 const Styles = StyleSheet.create({
     main: {
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'flex-start',
     },
     firstTitle: {
-        fontSize: remToPixel(1.625),
-        fontWeight: 'bold',
+        fontSize: remToPixel(1.6875),
+        fontWeight: '300',
         color: TitleColors.H1TitleColor,
-        margin: -18.4
+        marginBottom:remToPixel(0.5),
+        fontFamily:'sans-serif'
     },
     titleDescription: {
         color: TitleColors.H2TitleColor,
-        margin:3.2
+        marginTop: remToPixel(0.2),
+        marginBottom: remToPixel(0.5)
+    },
+    downloadButton: {
+        alignSelf: 'flex-end',
+        flexDirection:'row',
+        alignItems: 'center',
+        justifyContent:'space-around'
+    },
+    button:{
+        fontSize:remToPixel(1.25),
+        color: TitleColors.H3TitleColor
     }
 })
