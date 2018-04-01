@@ -5,8 +5,8 @@ import {
     View,
     WebView
 } from 'react-native'
-import { TitleColors } from '../../Util/ProjectColors'
-import {remToPixel} from "../../Util/Convertor";
+import {remToPixel} from "../../Util/Convertor"
+import Table from './Table'
 
 export default class Github extends PureComponent {
 
@@ -14,13 +14,14 @@ export default class Github extends PureComponent {
         return (
             <View style={Styles.main}>
                 <Text style={Styles.title}>
-                    Github
+                    Github:
                 </Text>
                 <WebView
                     style={Styles.heatMap}
                     scalesPageToFit={true}
                     automaticallyAdjustContentInsets={true}
                     source={{uri:"http://ghchart.rshah.org/AmatsuZero"}}/>
+                <Table/>
             </View>
         )
     }
@@ -35,11 +36,12 @@ const Styles = StyleSheet.create({
     title:{
         marginVertical:5,
         lineHeight:remToPixel(1.6),
-        fontSize: 15
+        fontSize: 15,
+        fontWeight: '300'
     },
     heatMap:{
-        width:300,
         flex:1,
-        height:100
+        height:100,
+        alignSelf:'stretch'
     }
 })

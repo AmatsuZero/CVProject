@@ -4306,6 +4306,10 @@ react-native-svg@^6.3.1:
     lodash "^4.16.6"
     pegjs "^0.10.0"
 
+react-native-timeline-listview@^0.2.3:
+  version "0.2.3"
+  resolved "http://registry.npm.taobao.org/react-native-timeline-listview/download/react-native-timeline-listview-0.2.3.tgz#e46b7f0fd2c2206329eee6194795e03899afe882"
+
 react-native-vector-icons@^4.5.0:
   version "4.5.0"
   resolved "http://registry.npm.taobao.org/react-native-vector-icons/download/react-native-vector-icons-4.5.0.tgz#6b95619e64f62f05f579f74a01fe5640df95158b"
