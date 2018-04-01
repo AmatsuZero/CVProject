@@ -25,7 +25,7 @@ export default class SkillBar extends PureComponent {
                 </View>
                 <View style={Styles.brief}>
                     <Text style={{
-                        marginVertical:5,
+                        marginVertical:10,
                         lineHeight:remToPixel(1.6),
                         fontSize: 15
                     }}>

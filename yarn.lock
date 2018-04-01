@@ -4306,6 +4306,10 @@ react-native-svg@^6.3.1:
     lodash "^4.16.6"
     pegjs "^0.10.0"
 
+react-native-table-component@^1.1.7:
+  version "1.1.7"
+  resolved "http://registry.npm.taobao.org/react-native-table-component/download/react-native-table-component-1.1.7.tgz#a5de4a4bb9d27ce6149f534e6a808626ed89bde2"
+
 react-native-timeline-listview@^0.2.3:
   version "0.2.3"
   resolved "http://registry.npm.taobao.org/react-native-timeline-listview/download/react-native-timeline-listview-0.2.3.tgz#e46b7f0fd2c2206329eee6194795e03899afe882"

@@ -10,6 +10,8 @@ import BriefTable from './BriefIntroductionTable'
 import SkillTable from "./SkillChart/main"
 import SkillBar from "./SkillPoint/main"
 import Github from "./OpenSourceActivity/main"
+import Experience from './Experience'
+import Projects from './Timeline/TimeLine'
 
 export default class MainView extends PureComponent {
     render() {
@@ -30,6 +32,11 @@ export default class MainView extends PureComponent {
                     <DividingLine name={"social-github"} title={"社区经验"}/>
                     <Github/>
                     <DividingLine name={"lightbulb"} title={"个人经验"}/>
+                    <Experience/>
+                    <DividingLine name={"flag"} title={"项目经历"}/>
+                    <Projects/>
+                    <DividingLine name={"book"} title={"开源项目"}/>
+                    <DividingLine name={"link"} title={"扩展技能"}/>
                 </ScrollView>
             </View>
         )
