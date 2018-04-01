@@ -12,6 +12,9 @@ import SkillBar from "./SkillPoint/main"
 import Github from "./OpenSourceActivity/main"
 import Experience from './Experience'
 import Projects from './Timeline/TimeLine'
+import SharedProjects from './MyProjects/MyProjects'
+import Expansion from './Expansion/Expansion'
+import BottomLine from './BottomLine'
 
 export default class MainView extends PureComponent {
     render() {
@@ -21,6 +24,7 @@ export default class MainView extends PureComponent {
                     style={Styles.main}
                     contentContainerStyle={Styles.contentContainer}
                     alwaysBounceVertical={true}
+                    scrollEventThrottle={400}
                 >
                     <BasicInfo/>
                     <DividingLine name={"torso"} title={"个人简介"}/>
@@ -36,7 +40,10 @@ export default class MainView extends PureComponent {
                     <DividingLine name={"flag"} title={"项目经历"}/>
                     <Projects/>
                     <DividingLine name={"book"} title={"开源项目"}/>
+                    <SharedProjects/>
                     <DividingLine name={"link"} title={"扩展技能"}/>
+                    <Expansion/>
+                    <BottomLine/>
                 </ScrollView>
             </View>
         )
