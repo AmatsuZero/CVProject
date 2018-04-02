@@ -54,7 +54,7 @@ export default class CommunityTable extends PureComponent {
                     Tracker.send("查看我的知乎页面")
                     Linking.openURL('https://www.zhihu.com/people/jiang-zhen-hua-86/activities')
                         .catch(err => Tracker.trackError(err.message))
-                }}>技术文章</Text>
+                }}>发布技术文章</Text>
             </Text></View>
         )
         return(
