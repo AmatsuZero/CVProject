@@ -48,7 +48,7 @@ export default class Experience extends PureComponent {
        return(
            <View style={Styles.container}>
                <Item year={"3"} info={["三年原生开发经验", "了解桌面/移动开发原理", "热衷iOS/Mac开发"]}/>
-               <Item year={"2"} info={["两年JS开发经验", "熟悉RN/Electron/Sketch插件开发","熟悉各类开发工具调试的使用"]}/>
+               <Item year={"2"} info={["两年JS开发经验", "熟悉RN/Electron/插件开发","熟悉各类开发工具调试的使用"]}/>
            </View>
        )
     }
