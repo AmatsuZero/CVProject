@@ -15,16 +15,45 @@ import Projects from './Timeline/TimeLine'
 import SharedProjects from './MyProjects/MyProjects'
 import Expansion from './Expansion/Expansion'
 import BottomLine from './BottomLine'
+import Share from './Modal/Share'
+import Modal from 'react-native-modalbox'
 
 export default class MainView extends PureComponent {
+
+    constructor() {
+        super()
+        this.reachEnd = this.reachEnd.bind(this)
+        this.modalRef = null
+        this.offset = 0
+    }
+
+    reachEnd(handler) {
+        const {layoutMeasurement, contentOffset, contentSize} = handler.nativeEvent
+        const paddingBottom = 10
+        const isEnd = layoutMeasurement.height + contentOffset.y >= contentSize.height - paddingBottom
+        const isDown = contentOffset.y > this.offset
+        this.offset = contentOffset.y
+        if (isDown && isEnd && !this.state.isDisabled)
+            this.modalRef.open()
+
+    }
+
     render() {
         return (
             <View>
+                <Modal position={"center"}
+                       style={Styles.modal}
+                       ref={ref => this.modalRef = ref}
+                       backdropPressToClose={true}
+                >
+                    <Share close={() => this.modalRef.close()}/>
+                </Modal>
                 <ScrollView
                     style={Styles.main}
                     contentContainerStyle={Styles.contentContainer}
                     alwaysBounceVertical={true}
                     scrollEventThrottle={400}
+                    onScroll={this.reachEnd}
                 >
                     <BasicInfo/>
                     <DividingLine name={"torso"} title={"个人简介"}/>
@@ -57,5 +86,12 @@ const Styles = StyleSheet.create({
     },
     main: {
         backgroundColor: '#FFFFFF'
+    },
+    modal:{
+        justifyContent:'center',
+        height:300,
+        width:300,
+        alignItems:'center',
+        borderRadius: 3
     }
 })
