@@ -10,6 +10,7 @@ import SVG, {
     Path
 } from 'react-native-svg'
 import { TitleColors } from '../../Util/ProjectColors'
+import { Tracker } from "../../Util/Analysis"
 
 export default class ProjectItem extends PureComponent {
     static propTypes = {
@@ -36,8 +37,10 @@ export default class ProjectItem extends PureComponent {
 		C22.917,23.878,22.916,23.875,22.916,23.872z" stroke="black"/>
                 </SVG>
                 <View style={Styles.wrapper}>
-                    <Text style={Styles.title} onPress={() => Linking.openURL(link)
-                            .catch(err => console.log(err))
+                    <Text style={Styles.title} onPress={() => {
+                        Tracker.send(`查看项目：${title}`)
+                        Linking.openURL(link)
+                            .catch(err => console.log(err))}
                     }>{title}</Text>
                     <Text style={Styles.description}>{description}</Text>
                 </View>

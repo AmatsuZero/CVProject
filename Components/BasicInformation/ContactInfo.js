@@ -7,6 +7,7 @@ import {
 } from 'react-native'
 import { TitleColors } from '../../Util/ProjectColors'
 import { remToPixel } from '../../Util/Convertor'
+import { Tracker } from "../../Util/Analysis"
 
 export default class ContactInfo extends PureComponent {
 
@@ -20,29 +21,35 @@ export default class ContactInfo extends PureComponent {
         this.linkedIn = this.linkedIn.bind(this)
     }
 
-    openQQ(code) {
-        Linking.openURL(`qq:\\${code}`).catch(err => console.log(err))
+    openQQ() {
+        Tracker.send("QQ联系")
+        Linking.openURL(`qq:\\741602428`).catch(err => console.log(err))
     }
 
-    mailTo(mail) {
-        Linking.openURL(`mailto:\\${mail}`).catch(err => console.log(err))
+    mailTo() {
+        Tracker.send("邮件联系")
+        Linking.openURL(`mailto:\\jzh16s@hotmail.com`).catch(err => console.log(err))
     }
 
-    callTo(number) {
-        Linking.openURL(`phone:\\${number}`).catch(err => console.log(err))
+    callTo() {
+        Tracker.send("电话联系")
+        Linking.openURL(`phone:\\13905355320`).catch(err => console.log(err))
     }
 
     zhihu() {
+        Tracker.send("查看知乎")
         Linking.openURL('https://www.zhihu.com/people/jiang-zhen-hua-86/activities')
             .catch(err => console.log(err))
     }
 
     github() {
+        Tracker.send("查看Github")
         Linking.openURL('https://github.com/AmatsuZero')
             .catch(err => console.log(err))
     }
 
     linkedIn() {
+        Tracker.send("查看领英")
         Linking.openURL('https://www.linkedin.com/in/jiangzhenhua/')
             .catch(err => console.log(err))
     }

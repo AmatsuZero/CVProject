@@ -3,12 +3,14 @@ import {
     Text,
     StyleSheet,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    Linking
 } from 'react-native'
 import { TitleColors } from '../../Util/ProjectColors'
 import { remToPixel } from '../../Util/Convertor'
 import ContactMe from './ContactInfo'
 import Icon from 'react-native-vector-icons/Foundation'
+import {Tracker} from "../../Util/Analysis"
 
 export default class Main extends PureComponent {
    constructor() {
@@ -17,7 +19,8 @@ export default class Main extends PureComponent {
    }
 
    download() {
-
+       Tracker.send("下载简历项目")
+       Linking.openURL("https://github.com/AmatsuZero/CVProject/releases")
    }
 
    render() {

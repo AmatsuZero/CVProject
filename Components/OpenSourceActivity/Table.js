@@ -13,6 +13,7 @@ import {
 } from 'react-native-table-component'
 import { TitleColors } from '../../Util/ProjectColors'
 import { remToPixel } from '../../Util/Convertor'
+import { Tracker } from "../../Util/Analysis"
 
 export default class CommunityTable extends PureComponent {
 
@@ -33,22 +34,27 @@ export default class CommunityTable extends PureComponent {
             index === 0 ? <View>
                 <Text style={Styles.text}>{data}
                     <Text style={Styles.hyperLink}
-                          onPress={ () => Linking.openURL('https://github.com/AmatsuZero')
-                            .catch(err => console.log(err))
+                          onPress={ () => {
+                              Tracker.send("查看我的Github")
+                              Linking.openURL('https://github.com/AmatsuZero').catch(err => console.log(err))
+                          }
                     }>个人</Text>
                     <Text>和</Text>
                     <Text style={Styles.hyperLink}
-                          onPress={() =>
-                        Linking.openURL('https://github.com/mockingbot')
-                        .catch(err => console.log(err))}>墨刀</Text>
+                          onPress={() => {
+                              Tracker.send("查看墨刀开源项目")
+                              Linking.openURL('https://github.com/mockingbot')
+                                  .catch(err => console.log(err))
+                          }}>墨刀</Text>
                     <Text>的开源项目</Text>
                 </Text>
             </View> : <View><Text style={Styles.text}>
                 {data}
-                <Text style={Styles.hyperLink} onPress={() =>
+                <Text style={Styles.hyperLink} onPress={() =>{
+                    Tracker.send("查看我的知乎页面")
                     Linking.openURL('https://www.zhihu.com/people/jiang-zhen-hua-86/activities')
-                    .catch(err => console.log(err))
-                }>技术文章</Text>
+                        .catch(err => console.log(err))
+                }}>技术文章</Text>
             </Text></View>
         )
         return(

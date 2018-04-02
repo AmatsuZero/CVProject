@@ -17,6 +17,7 @@ import Expansion from './Expansion/Expansion'
 import BottomLine from './BottomLine'
 import Share from './Modal/Share'
 import Modal from 'react-native-modalbox'
+import {Tracker} from "../Util/Analysis"
 
 export default class MainView extends PureComponent {
 
@@ -27,13 +28,17 @@ export default class MainView extends PureComponent {
         this.offset = 0
     }
 
+    componentDidMount() {
+        Tracker.trackScreen()
+    }
+
     reachEnd(handler) {
         const {layoutMeasurement, contentOffset, contentSize} = handler.nativeEvent
         const paddingBottom = 10
         const isEnd = layoutMeasurement.height + contentOffset.y >= contentSize.height - paddingBottom
         const isDown = contentOffset.y > this.offset
         this.offset = contentOffset.y
-        if (isDown && isEnd && !this.state.isDisabled)
+        if (isDown && isEnd)
             this.modalRef.open()
 
     }

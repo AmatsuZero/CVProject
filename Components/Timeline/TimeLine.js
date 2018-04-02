@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 import Timeline from 'react-native-timeline-listview'
 import { TitleColors } from '../../Util/ProjectColors'
+import { Tracker } from "../../Util/Analysis"
 
 export default class Projects extends PureComponent {
     constructor() {
@@ -23,7 +24,8 @@ export default class Projects extends PureComponent {
                 details:[
                     "iOS版客户端从开发到上限的全部开发、上架及后续迭代、维护的工作；",
                     "负责增值服务Hybrid模块的开发到接入；"
-                ]
+                ],
+                trackId: "阿大经历"
             },
             {
                 time: "2016.3",
@@ -35,7 +37,8 @@ export default class Projects extends PureComponent {
                 details:[
                     "作为VC浏览器iOS端小组负责人参与日常技术方案选型、业务迭代排期、线上异常监控、Bug修复等工作；",
                     "负责VC浏览器内部中后端的开发工作；"
-                ]
+                ],
+                trackId: "四象经历"
             },
             {
                 time:"2017.4",
@@ -47,7 +50,8 @@ export default class Projects extends PureComponent {
                 details:[
                     "负责RN客户端的开发、迭代和维护、异常监控等工作;",
                     "用Swift对iOS客户端进行重构并上架，客户端的性能和稳定性有了一定的提高；"
-                ]
+                ],
+                trackId:"墨刀-移动经历"
             },
             {
                 time:"2017.8",
@@ -59,7 +63,8 @@ export default class Projects extends PureComponent {
                     "负责桌面客户端的开发、迭代和维护、异常监控等工作；",
                     "编写自动化工具，实现客户端的自动测试、打包、上传至S3的自动化；",
                     "重写取色器，气团掉原来的Qt版本，实现对客户端体积瘦身；"
-                ]
+                ],
+                trackId:"墨刀-桌面经历"
             },
             {
                 time:"2017.10",
@@ -71,7 +76,8 @@ export default class Projects extends PureComponent {
                     "负责Sketch插件的开发、迭代和维护、异常监控等工作；",
                     "对原来的Sketch的UI部分通过AppKit重写；",
                     "将原有解析功能完全使用JavaScriptCore+Runtime完全重构；"
-                ]
+                ],
+                trackId:"墨刀-设计工具经历"
             }
         ]
         this.onEventPress = this.onEventPress.bind(this)
@@ -79,6 +85,7 @@ export default class Projects extends PureComponent {
     }
 
     onEventPress(data) {
+        Tracker.send(`${data.trackId}`)
         Linking.openURL(data.downloadUrl)
             .catch(err => console.log(err))
     }

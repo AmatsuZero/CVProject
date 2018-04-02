@@ -4287,6 +4287,10 @@ react-devtools-core@3.1.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-google-analytics-bridge@^5.6.3:
+  version "5.6.3"
+  resolved "http://registry.npm.taobao.org/react-native-google-analytics-bridge/download/react-native-google-analytics-bridge-5.6.3.tgz#7fb38cc9a596b3e3493bac92aefdd45bfcec6a2d"
+
 react-native-modalbox@^1.4.2:
   version "1.4.2"
   resolved "http://registry.npm.taobao.org/react-native-modalbox/download/react-native-modalbox-1.4.2.tgz#818c9354c9b13327ec807c6436e8516b3b419478"

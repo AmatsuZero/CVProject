@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import PropTypes from 'prop-types'
 import { TitleColors } from '../../Util/ProjectColors'
+import {Tracker} from "../../Util/Analysis"
 
 export default class SharePanel extends PureComponent {
 
@@ -44,10 +45,12 @@ export default class SharePanel extends PureComponent {
     }
 
     shareToQQ() {
+        Tracker.send("QQ分享")
         this.props.close()
     }
 
     shareToWechat() {
+        Tracker.send("微信分享")
         this.props.close()
     }
 
