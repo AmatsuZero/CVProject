@@ -87,7 +87,7 @@ export default class Projects extends PureComponent {
     onEventPress(data) {
         Tracker.send(`${data.trackId}`)
         Linking.openURL(data.downloadUrl)
-            .catch(err => console.log(err))
+            .catch(err => Tracker.trackError(err.message))
     }
 
     renderDetail(rowData, sectionID, rowID) {

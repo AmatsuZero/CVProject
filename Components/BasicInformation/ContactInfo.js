@@ -23,35 +23,35 @@ export default class ContactInfo extends PureComponent {
 
     openQQ() {
         Tracker.send("QQ联系")
-        Linking.openURL(`qq:\\741602428`).catch(err => console.log(err))
+        Linking.openURL(`qq:\\741602428`).catch(err => Tracker.trackError(err.message))
     }
 
     mailTo() {
         Tracker.send("邮件联系")
-        Linking.openURL(`mailto:\\jzh16s@hotmail.com`).catch(err => console.log(err))
+        Linking.openURL(`mailto:\\jzh16s@hotmail.com`).catch(err => Tracker.trackError(err.message))
     }
 
     callTo() {
         Tracker.send("电话联系")
-        Linking.openURL(`phone:\\13905355320`).catch(err => console.log(err))
+        Linking.openURL(`phone:\\13905355320`).catch(err => Tracker.trackError(err.message))
     }
 
     zhihu() {
         Tracker.send("查看知乎")
         Linking.openURL('https://www.zhihu.com/people/jiang-zhen-hua-86/activities')
-            .catch(err => console.log(err))
+            .catch(err => Tracker.trackError(err.message))
     }
 
     github() {
         Tracker.send("查看Github")
         Linking.openURL('https://github.com/AmatsuZero')
-            .catch(err => console.log(err))
+            .catch(err => Tracker.trackError(err.message))
     }
 
     linkedIn() {
         Tracker.send("查看领英")
         Linking.openURL('https://www.linkedin.com/in/jiangzhenhua/')
-            .catch(err => console.log(err))
+            .catch(err => Tracker.trackError(err.message))
     }
 
     render() {

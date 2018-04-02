@@ -6,6 +6,8 @@ import {
     Linking
 } from 'react-native'
 import { TitleColors } from '../Util/ProjectColors'
+import {Tracker} from "../Util/Analysis"
+
 export default class BottomLine extends PureComponent {
     render() {
         return(
@@ -13,13 +15,15 @@ export default class BottomLine extends PureComponent {
                 <View style={Styles.line}/>
                 <Text style={Styles.text}>
                     {`${(new Date()).getFullYear()} `}
-                    <Text style={{textDecorationLine:"underline"}} onPress={() =>
+                    <Text style={{textDecorationLine:"underline"}} onPress={() => {
+                        Tracker.send("看完简历查看我的页面")
                         Linking.openURL('https://github.com/AmatsuZero')
-                        .catch(err => console.log(err))}>AmatsuZero</Text>
+                        .catch(err => Tracker.trackError(err.message))}}>AmatsuZero</Text>
                     <Text>{" & "}</Text>
-                    <Text style={{textDecorationLine:"underline"}} onPress={() =>
+                    <Text style={{textDecorationLine:"underline"}} onPress={() => {
+                        Tracker.send("看完简历查看简历项目")
                         Linking.openURL('https://github.com/AmatsuZero/CVProject.git')
-                        .catch(err => console.log(err))}>简历项目</Text>
+                        .catch(err => Tracker.trackError(err.message))}}>简历项目</Text>
                 </Text>
             </View>
         )

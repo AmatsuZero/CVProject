@@ -10,6 +10,7 @@ import {
 import PropTypes from 'prop-types'
 import { TitleColors } from '../../Util/ProjectColors'
 import {Tracker} from "../../Util/Analysis"
+import Social from '../../Util/Socialization'
 
 export default class SharePanel extends PureComponent {
 
@@ -46,11 +47,13 @@ export default class SharePanel extends PureComponent {
 
     shareToQQ() {
         Tracker.send("QQ分享")
+        Social.shareQQ()
         this.props.close()
     }
 
     shareToWechat() {
         Tracker.send("微信分享")
+        Social.shareWechat()
         this.props.close()
     }
 

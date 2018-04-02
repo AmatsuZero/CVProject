@@ -40,7 +40,7 @@ export default class ProjectItem extends PureComponent {
                     <Text style={Styles.title} onPress={() => {
                         Tracker.send(`查看项目：${title}`)
                         Linking.openURL(link)
-                            .catch(err => console.log(err))}
+                            .catch(err => Tracker.trackError(err.message))}
                     }>{title}</Text>
                     <Text style={Styles.description}>{description}</Text>
                 </View>

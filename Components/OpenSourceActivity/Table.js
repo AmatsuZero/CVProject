@@ -36,7 +36,7 @@ export default class CommunityTable extends PureComponent {
                     <Text style={Styles.hyperLink}
                           onPress={ () => {
                               Tracker.send("查看我的Github")
-                              Linking.openURL('https://github.com/AmatsuZero').catch(err => console.log(err))
+                              Linking.openURL('https://github.com/AmatsuZero').catch(err => Tracker.trackError(err.message))
                           }
                     }>个人</Text>
                     <Text>和</Text>
@@ -44,7 +44,7 @@ export default class CommunityTable extends PureComponent {
                           onPress={() => {
                               Tracker.send("查看墨刀开源项目")
                               Linking.openURL('https://github.com/mockingbot')
-                                  .catch(err => console.log(err))
+                                  .catch(err => Tracker.trackError(err.message))
                           }}>墨刀</Text>
                     <Text>的开源项目</Text>
                 </Text>
@@ -53,7 +53,7 @@ export default class CommunityTable extends PureComponent {
                 <Text style={Styles.hyperLink} onPress={() =>{
                     Tracker.send("查看我的知乎页面")
                     Linking.openURL('https://www.zhihu.com/people/jiang-zhen-hua-86/activities')
-                        .catch(err => console.log(err))
+                        .catch(err => Tracker.trackError(err.message))
                 }}>技术文章</Text>
             </Text></View>
         )
