@@ -2,12 +2,35 @@
   "name": "CVProject",
   "version": "0.0.1",
   "private": true,
+  "main": "./Server/index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "server": "nodemon ./Server/index.js",
+    "postinstall": "node ./tasks/configGenerate && react-native link",
+    "update_login": "pushy login"
   },
   "dependencies": {
+    "co": "^4.6.0",
+    "co-monk": "^1.0.0",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^5.0.1",
+    "download": "^6.2.5",
+    "download-status": "^2.2.1",
+    "es6-promise": "^4.2.4",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-ejs": "^4.1.1",
+    "koa-locales": "^1.8.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "mongodb": "^3.0.5",
+    "monk": "^6.0.5",
+    "nodemailer": "^4.6.4",
     "prop-types": "^15.6.1",
+    "qrcode": "^1.2.0",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.4",
     "react-native-google-analytics-bridge": "^5.6.3",
@@ -17,13 +40,18 @@
     "react-native-svg-charts": "^4.2.0",
     "react-native-table-component": "^1.1.7",
     "react-native-timeline-listview": "^0.2.3",
+    "react-native-update": "^5.0.0",
     "react-native-vector-icons": "^4.5.0",
-    "react-native-wechat": "^1.9.9"
+    "react-native-wechat": "^1.9.9",
+    "rimraf": "^2.6.2",
+    "silly-datetime": "^0.1.2"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
+    "nodemon": "^1.17.3",
+    "react-native-update-cli": "^0.1.0",
     "react-test-renderer": "16.3.0-alpha.1"
   },
   "jest": {

@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react'
-import MainView from './Components/Main'
+import MainView from './app/Main'
 
 export default class App extends Component {
   render() {

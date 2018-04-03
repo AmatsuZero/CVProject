@@ -1,0 +1,31 @@
+<head>
+  <title><%= project.name %></title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <link rel="stylesheet" href="/assets/styles/base.css" media="screen">
+  <link rel="stylesheet" href="/assets/styles/main.css" media="screen">
+</head>
+<body>
+  <div class="main">
+    <div class="app-wrap">
+      <div class="app">
+        <img src="/images/<%= project.icon %>" alt="" class="app__icon">
+        <h1 class="app__name"><%= project.name %></h1>
+        <div class="app__update-time">
+          <span>
+            <%= __('last_update_at') %>
+            :
+          </span>
+          <abbr title=""><%= project.updateTime %></abbr>
+        </div>
+        <a href="itms-services://?action=download-manifest&url=https://ipa.<%= host %>/ipas/<%= project.owner %>/<%= project.cid %>-<%= project.timestamp %>/manifest.plist" class="app__install-btn"><%= __('install') %></a>
+      </div>
+    </div>
+  </div>
+  <div class="cover wechat">
+    <p class="cover__tip">
+      <%= __('open_in_browser') %>
+    </p>
+    <img src="/assets/images/short-arrow.png" alt="" class="cover__arrow">
+  </div>
+  <script src="/assets/js/main.js" charset="utf-8"></script>
+</body>

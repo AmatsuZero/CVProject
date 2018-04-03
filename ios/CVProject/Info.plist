@@ -46,6 +46,11 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>reactnative.cn</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>localhost</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -91,7 +96,6 @@
 		<string>mqzoneopensdkapiV2</string>
 		<string>mqzoneopensdkapi19</string>
 		<string>mqzoneopensdkapi</string>
-		<string>mqzoneopensdk</string>
 		<string>mqqopensdkapiv4</string>
 	</array>
 	<key>CFBundleURLTypes</key>

@@ -22,6 +22,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -60,6 +61,7 @@
 		CC7B01414CFD402E8929B452 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5872AB66A6254CF4B9664A60 /* Octicons.ttf */; };
 		D9DCE0753E484086BBE5AD8F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7875EB1C9C14B229F49F759 /* CoreTelephony.framework */; };
 		E362D46C7C1348E5BDB1B24F /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5618873F6DA443878F25060D /* libstdc++.tbd */; };
+		E6C2ECDC95AA4B2190E18033 /* libRCTHotUpdate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1B75E460524E78AA14D352 /* libRCTHotUpdate.a */; };
 		E9860D8C38354587AA25937D /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 005AC08CA20C44808E34885B /* libiconv.tbd */; };
 		EA0CFCC11E2E4E5C9662D8A8 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7581F6CA40DB44F2934A254F /* libRNVectorIcons.a */; };
 		ECD4CF9C87444748A57AC50B /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D45964CCFE164A899D833490 /* MaterialIcons.ttf */; };
@@ -236,6 +238,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 10D6D7A41F160C250066F0F3;
 			remoteInfo = RCTWeChatTests;
+		};
+		21B66C462073245A006897BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BAE73EBCB6846A394BF65DD /* RCTHotUpdate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 91C5EFFF1C76ECA90037E727;
+			remoteInfo = RCTHotUpdate;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -417,6 +426,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CVProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CVProject/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2AF3A16BEB104D62963AC7C1 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2D02E47B1E0B4A5D006451C7 /* CVProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +435,7 @@
 		3E3FF362B2B640438574F65E /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3EF40DCEB3E74E24976FB8E4 /* CoreData.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4785F25A89C1481EA9AD6E1A /* libRCTWeChat.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTWeChat.a; sourceTree = "<group>"; };
+		4BAE73EBCB6846A394BF65DD /* RCTHotUpdate.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTHotUpdate.xcodeproj; path = "../node_modules/react-native-update/ios/RCTHotUpdate.xcodeproj"; sourceTree = "<group>"; };
 		507DDB0E4D28498C9B770ABB /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		510DD2F5AC65435C9CEBC566 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		5618873F6DA443878F25060D /* libstdc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -444,6 +455,7 @@
 		B5309A7245D0484E91E97907 /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BE0974E21CC84D8BBCE6D430 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		C0EB3D4F5CDC4AD782FE8989 /* RCTWeChat.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTWeChat.xcodeproj; path = "../node_modules/react-native-wechat/ios/RCTWeChat.xcodeproj"; sourceTree = "<group>"; };
+		CA1B75E460524E78AA14D352 /* libRCTHotUpdate.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTHotUpdate.a; sourceTree = "<group>"; };
 		D04AD2691D8E487DAB0023A2 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		D45964CCFE164A899D833490 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		D7309F9565CC4DE7B4B02CDD /* libsqlite3.0.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -469,6 +481,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */,
+				A22DF36343F54133804CBB3C /* libz.tbd in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -487,7 +501,6 @@
 				46E0F1C50FC9462B8EAC192F /* libRCTGoogleAnalyticsBridge.a in Frameworks */,
 				C4215C64132D4CD9BA2B91CE /* CoreData.framework in Frameworks */,
 				FA21EB5A55B948D2A67742ED /* SystemConfiguration.framework in Frameworks */,
-				A22DF36343F54133804CBB3C /* libz.tbd in Frameworks */,
 				63773A62E18E479BAF1C5276 /* libsqlite3.0.tbd in Frameworks */,
 				C3F1166E3A7942F08FD0EEF6 /* libRCTQQSDK.a in Frameworks */,
 				E9860D8C38354587AA25937D /* libiconv.tbd in Frameworks */,
@@ -499,6 +512,7 @@
 				AB9C2DFF079B48569791C41E /* TencentOpenAPI.framework in Frameworks */,
 				AB5428A4736F4C67985D765E /* libRCTWeChat.a in Frameworks */,
 				308CD0E385B346088E08564C /* RCTWeChatTests.xctest in Frameworks */,
+				E6C2ECDC95AA4B2190E18033 /* libRCTHotUpdate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +668,7 @@
 				FA71204324DA4E33B50677B2 /* libRCTQQSDK.a */,
 				4785F25A89C1481EA9AD6E1A /* libRCTWeChat.a */,
 				7A6599136EDA49E9905CE135 /* RCTWeChatTests.xctest */,
+				CA1B75E460524E78AA14D352 /* libRCTHotUpdate.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -700,9 +715,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		21B66C432073245A006897BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21B66C472073245A006897BB /* libRCTHotUpdate.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21B66C882073347A006897BB /* libbz2.1.0.tbd */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				3EF40DCEB3E74E24976FB8E4 /* CoreData.framework */,
 				3E3FF362B2B640438574F65E /* SystemConfiguration.framework */,
@@ -757,6 +781,7 @@
 				104F5D89FDF940C68097D877 /* RCTGoogleAnalyticsBridge.xcodeproj */,
 				9668247B30D54303964DC358 /* RCTQQSDK.xcodeproj */,
 				C0EB3D4F5CDC4AD782FE8989 /* RCTWeChat.xcodeproj */,
+				4BAE73EBCB6846A394BF65DD /* RCTHotUpdate.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -910,14 +935,20 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = TCU9L9SQC4;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = TCU9L9SQC4;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TCU9L9SQC4;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TCU9L9SQC4;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -954,6 +985,10 @@
 				{
 					ProductGroup = 214FCD632071C39700679353 /* Products */;
 					ProjectRef = 104F5D89FDF940C68097D877 /* RCTGoogleAnalyticsBridge.xcodeproj */;
+				},
+				{
+					ProductGroup = 21B66C432073245A006897BB /* Products */;
+					ProjectRef = 4BAE73EBCB6846A394BF65DD /* RCTHotUpdate.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
@@ -1174,6 +1209,13 @@
 			fileType = wrapper.cfbundle;
 			path = RCTWeChatTests.xctest;
 			remoteRef = 214FCDE62071D0DC00679353 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21B66C472073245A006897BB /* libRCTHotUpdate.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTHotUpdate.a;
+			remoteRef = 21B66C462073245A006897BB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */ = {
@@ -1468,6 +1510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1479,12 +1522,14 @@
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-wechat/ios",
+					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = CVProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1507,6 +1552,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-svgios/**",
@@ -1514,12 +1560,14 @@
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-wechat/ios",
+					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = CVProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1543,6 +1591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
@@ -1554,6 +1603,7 @@
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-wechat/ios",
+					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = CVProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1572,6 +1622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
@@ -1583,6 +1634,7 @@
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-wechat/ios",
+					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = CVProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1606,6 +1658,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1615,11 +1668,13 @@
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-wechat/ios",
+					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = "CVProject-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1651,6 +1706,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1659,11 +1715,13 @@
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 					"$(SRCROOT)/../node_modules/react-native-qqsdk/ios/RCTQQSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-wechat/ios",
+					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = "CVProject-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1693,12 +1751,14 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CVProject-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1725,11 +1785,13 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CVProject-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

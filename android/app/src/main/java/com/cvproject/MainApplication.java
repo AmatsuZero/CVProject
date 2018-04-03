@@ -3,6 +3,7 @@ package com.cvproject;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import cn.reactnative.modules.update.UpdatePackage;
 import com.theweflex.react.WeChatPackage;
 import me.vanpan.rctqqsdk.QQSDKPackage;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new UpdatePackage(),
             new WeChatPackage(),
             new QQSDKPackage(),
             new GoogleAnalyticsBridgePackage(),

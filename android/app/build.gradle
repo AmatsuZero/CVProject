@@ -136,6 +136,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-update')
     compile project(':react-native-wechat')
     compile project(':react-native-qqsdk')
     compile project(':react-native-google-analytics-bridge')
