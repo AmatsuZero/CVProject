@@ -51,9 +51,17 @@ buck-out/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
+fastlane/README.md
+fastlane/report.xml
 
 # config.js
 config.js
 
 #热更新
 .update
+
+# deployment
+.env
+.env.default
+.webenv
+servers.json

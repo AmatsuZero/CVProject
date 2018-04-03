@@ -11,5 +11,6 @@ const giveResponse = (response, msg) => {
 
 export {
     isCreating,
-    jobs
+    jobs,
+    giveResponse
 }

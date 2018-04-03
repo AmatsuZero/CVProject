@@ -1,0 +1,85 @@
+
+default_platform :ios
+
+app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+
+plist_path = 'MockingBotIPA/Info.plist'
+
+BASE_URL = "https://ipa.{{host}}/ipas"
+
+platform :ios do
+  before_all do
+  end
+
+  desc "Build for ad-hoc distribution"
+  lane :'ad-hoc' do
+    unlock_keychain(
+      path: "login.keychain-db",
+      password: ENV['KEYCHAIN_PASSWORD'],
+      add_to_search_list: :replace
+    )
+    sh "security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k #{ENV['KEYCHAIN_PASSWORD']} login.keychain-db"
+    update_app_identifier(
+      app_identifier: app_identifier,
+      plist_path: plist_path,
+      xcodeproj: "MockingBotIPA.xcodeproj"
+    )
+    update_info_plist(
+      display_name: "{{app_name}}",
+      plist_path: plist_path
+    )
+    produce(
+      app_name: "{{cid}}{{timestamp}}",
+      skip_itc: true
+    )
+    sh "bundle exec fastlane produce disable_services --push-notification --app_identifier #{app_identifier}"
+    cert(
+      output_path: "./fastlane/certs"
+    )
+    sigh(
+      adhoc: true,
+      force: true,
+      output_path: "./fastlane/profiles"
+    )
+    data = FastlaneCore::ProvisioningProfile.parse(Dir.glob("./profiles/*.mobileprovision").first)
+    team_id = data["Entitlements"]["com.apple.developer.team-identifier"]
+    update_project_provisioning(
+      xcodeproj: "MockingBotIPA.xcodeproj",
+      target_filter: "MockingBotIPA$",
+      build_configuration: "Release"
+    )
+    update_project_team(
+      path: "./MockingBotIPA.xcodeproj",
+      teamid: team_id
+    )
+    gym(
+      clean: true,
+      export_options: {
+        scheme: "MockingBotIPA",
+        method: "ad-hoc",
+        manifest: {
+          appURL: "#{BASE_URL}/{{uuid}}/{{cid}}-{{timestamp}}/{{cid}}{{timestamp}}.ipa",
+          displayImageURL: "https://s3.cn-north-1.amazonaws.com.cn/modao/downloads/images/blank57.png",
+          fullSizeImageURL: "https://s3.cn-north-1.amazonaws.com.cn/modao/downloads/images/blank512.jpg"
+        }
+      },
+      include_bitcode: true,
+      include_symbols: true,
+      output_directory: "../server/public/ipas/{{uuid}}/{{cid}}-{{timestamp}}",
+      output_name: "{{cid}}{{timestamp}}",
+      scheme: "MockingBotIPA"
+    )
+    correct_app_name(
+      plist_folder: "{{uuid}}/{{cid}}-{{timestamp}}",
+      app_name: "{{app_name}}"
+    )
+  end
+
+  after_all do |lane|
+  end
+
+  error do |lane, exception|
+    puts "#{exception} caused by #{lane}"
+    sh "exit 1"
+  end
+end
