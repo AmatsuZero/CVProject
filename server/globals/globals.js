@@ -1,16 +1,12 @@
-let isCreating = true
-const jobs = []
+exports.globalState = {
+    isCreating: true,
+    jobs: []
+}
 
-const giveResponse = (response, msg) => {
+exports.giveResponse = (response, msg) => {
     response.body = JSON.stringify({
         err: msg
     })
     response.status = 200
     return Promise.resolve()
-}
-
-export {
-    isCreating,
-    jobs,
-    giveResponse
 }

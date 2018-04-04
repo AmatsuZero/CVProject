@@ -1,13 +1,37 @@
 const db = require('monk')('localhost/mbipa')
 
-const projects = async () => db.get('projects')
-const users = async () => db.get('users')
+class PersistenceCenter {
+    constructor() {
+        this.projects = async () => db.get('projects')
+        this.users = async () => db.get('users')
+    }
 
-const saveStatus = (token, projStatus, userStatus) => {
+    async findUser(query) {
+        const users = await this.users()
+        return users.findOne(query)
+    }
 
+    async findProject(query) {
+        const projects = await this.projects()
+        return projects.findOne(query)
+    }
+
+    async save(token, ownerStatus) {
+        const project = await this.projects().findOne({token})
+        if (!project) {
+            try {
+                await this.projects().insert({owner: ownerStatus.uuid})
+            } catch (e) {
+                console.log(e.stack)
+            }
+        } else {
+            await this.projects().update({
+                owner: ownerStatus.uuid
+            })
+        }
+    }
 }
 
-export {
-    projects,
-    users
-}
+const Persistence = new PersistenceCenter()
+
+module.exports = Persistence

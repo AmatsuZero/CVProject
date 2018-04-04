@@ -1,6 +1,6 @@
 const path = require('path')
 const Router = require('koa-router')
-const { projects } = require('../db')
+const Persistence = require('../db')
 const { DateFormatter } = require('../locales/index')
 const { promisify } = require('util')
 const stat = promisify(require('fs').stat)
@@ -12,8 +12,8 @@ const isIPAExist = async (uuid, timestamp) => {
 }
 
 const install = new Router()
-const showInstallPage = () => install.get('/:token', async ctx => {
-    const project = await projects().findOne({token: ctx.params['token']})
+install.get('/:token', async ctx => {
+    const project = await Persistence.findProject({token: ctx.params['token']})
     let ipaExist
     try {
         ipaExist = await isIPAExist(project.owner, project.timestamp)
@@ -29,7 +29,6 @@ const showInstallPage = () => install.get('/:token', async ctx => {
     return await ctx.render('404')
 })
 
-export {
-    isIPAExist,
-    showInstallPage
-}
+exports.install = install
+
+exports.isIPAExist = isIPAExist

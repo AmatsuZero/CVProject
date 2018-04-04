@@ -22,7 +22,7 @@
     "koa-static": "^4.0.2",
     "mongodb": "^3.0.5",
     "monk": "^6.0.5",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^2.3.0",
     "prop-types": "^15.6.1",
     "qrcode": "^1.2.0",
     "react": "16.3.0-alpha.1",

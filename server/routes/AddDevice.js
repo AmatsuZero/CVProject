@@ -1,4 +1,4 @@
-const { users } = require('../db')
+const Persistence = require('../db')
 const { giveResponse } = require('../globals/globals')
 const { decrypt } = require('../util/aes')
 const { spawn } = require('child_process')
@@ -22,9 +22,9 @@ const register = (name, udid, email, password) => new Promise(resolve => {
 })
 
 const addDeviceRoute = new Router()
-module.exports = () => addDeviceRoute.post('/add_device', body, async ctx => {
+addDeviceRoute.post('/add', body, async ctx => {
     const {uuid, udid, owner_uuid} = ctx.request.body
-    const owner = await users().findOne({uuid: owner_uuid})
+    const owner = await Persistence.findUser({uuid: owner_uuid})
     if(!owner)
         return giveResponse(ctx.response, 2)
     try {
@@ -41,3 +41,5 @@ module.exports = () => addDeviceRoute.post('/add_device', body, async ctx => {
         return giveResponse(ctx.response, 1)
     }
 })
+
+module.exports = addDeviceRoute

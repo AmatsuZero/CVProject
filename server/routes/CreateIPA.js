@@ -1,11 +1,11 @@
 const Router = require('koa-router')
 const { spawn } = require('child_process')
 const path = require('path')
-const { isCreating, jobs } = require('../globals/globals')
+const { globalState } = require('../globals/globals')
 const { giveResponse } = require('../globals/globals')
 const { isIPAExist } = require('./InstallPage')
-const { users } = require('../db')
-const { decrypt } = require('../util/aes')
+const Persistence = require('../db')
+const MailCenter = require('../service/mail')
 
 const runCreateIPAs = async (projectStatus, userStatus, ownerStatus, token, origin) => {
     const option = {
@@ -15,7 +15,7 @@ const runCreateIPAs = async (projectStatus, userStatus, ownerStatus, token, orig
         password: ownerStatus.password,
         uuid: ownerStatus.uuid,
     }
-    jobs.push(option)
+    globalState.jobs.push(option)
     return createIpa(userStatus, projectStatus, ownerStatus, token, origin)
 }
 
@@ -35,17 +35,37 @@ const createIpa = job => new Promise(resolve => {
 })
 
 const createIPAs = async (userStatus, projectStatus, ownerStatus, token, origin) => {
-    if (isCreating) return
-    const job = jobs.shift()
+    if (globalState.isCreating) return
+    const job = globalState.jobs.shift()
     try {
         const ipaExist = await isIPAExist(job.uuid, job.timestamp)
+        if (ipaExist) {
+            await Persistence.save(token, projectStatus, ownerStatus)
+            MailCenter.sendMail(userStatus.email, userStatus.name, "CVProject", `${origin}/${token}`, true)
+        } else {
+            throw new Error('ipa not exist')
+        }
     } catch (e) {
-
+        console.log(e.stack)
+        globalState.isCreating = true
+        const exitCode = await createIpa(job)
+        if(exitCode === 0) {
+            await Persistence.save(token, projectStatus, ownerStatus)
+            MailCenter.sendMail(userStatus.email, userStatus.name, "CVProject", `${origin}/${token}`, true);
+        } else {
+            MailCenter.sendMail(userStatus.email, userStatus.name, "CVProject", `${origin}/${token}`, false);
+        }
+        globalState.isCreating = false
+        if(globalState.jobs.length > 0) {
+            return await createIPAs(userStatus, projectStatus, ownerStatus, token, origin)
+        }
     }
 }
 
 const create = new Router()
-module.exports = () => create.get('/:token/create', async ctx => {
+create.get('/:token/create', async ctx => {
     await giveResponse(ctx.response, 0)
-
+    await runCreateIPAs(ctx.state.projectStatus, ctx.state.userStatus, ctx.state.ownerStatus, ctx.params['token'], ctx.request.origin)
 })
+
+module.exports = create
