@@ -1,18 +1,16 @@
-import BasicInfo from '../../app/BasicInformation/Main'
-import React from 'react'
-import {
-    View
-} from 'react-native'
+import React from "react";
+import { View } from "react-native";
+import BasicInfo from "../../app/BasicInformation/Main";
 
-export default AboutMe = () => {
-    return(
-        <View style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'white',
-        }}>
-            <BasicInfo/>
-        </View>
-    )
-}
+export default () => (
+  <View
+    style={{
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "white"
+    }}
+  >
+    <BasicInfo />
+  </View>
+);

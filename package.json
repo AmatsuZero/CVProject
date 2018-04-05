@@ -6,10 +6,12 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
+    "lint": "eslint ./app",
     "server": "nodemon ./server/index.js",
     "postinstall": "node ./tasks/configGenerate && react-native link",
     "update_login": "pushy login",
-    "storybook": "storybook start -p 7007"
+    "storybook": "storybook start -p 7007",
+    "precommit": "pretty-quick --staged"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
@@ -42,22 +44,35 @@
     "silly-datetime": "^0.1.2"
   },
   "devDependencies": {
-    "babel-jest": "22.4.3",
-    "babel-preset-react-native": "4.0.0",
-    "jest": "22.4.3",
-    "nodemon": "^1.17.3",
-    "react-native-update-cli": "^0.1.0",
-    "react-test-renderer": "16.3.0-alpha.1",
-    "@storybook/react-native": "^3.4.0",
     "@storybook/addon-actions": "^3.4.0",
     "@storybook/addon-links": "^3.4.0",
     "@storybook/addons": "^3.4.0",
+    "@storybook/react-native": "^3.4.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
     "babel-runtime": "^6.26.0",
-    "react-dom": "16.3.0-alpha.1"
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "jest": "22.4.3",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.11.1",
+    "pretty-quick": "^1.4.1",
+    "react-dom": "16.3.0-alpha.1",
+    "react-native-update-cli": "^0.1.0",
+    "react-test-renderer": "16.3.0-alpha.1"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "prettier": {
+    "prettier.singleQuote": true
   },
   "qq_app_id": "1106815982"
 }
