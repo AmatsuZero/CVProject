@@ -11,7 +11,11 @@ import Icon from "react-native-vector-icons/Foundation";
 import { remToPixel } from "../utils/Convertor";
 import Table from "./Table";
 import { TitleColors } from "../utils/ProjectColors";
-import { CommitImageView, CommitSceneView } from "./CommitImageView";
+import {
+  CommitImageView,
+  CommitSceneView,
+  ARPresenter
+} from "./CommitImageView";
 
 export default class Github extends PureComponent {
   constructor() {
@@ -51,7 +55,7 @@ export default class Github extends PureComponent {
               <Icon.Button
                 name="camera"
                 backgroundColor="#3b5998"
-                onPress={() => {}}
+                onPress={() => ARPresenter.presnetAR()}
               >
                 VR查看
               </Icon.Button>

@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Linking, StyleSheet, Text, View } from "react-native";
+import { Linking, StyleSheet, Text, View, Platform } from "react-native";
 import { TitleColors } from "../utils/ProjectColors";
 import { remToPixel } from "../utils/Convertor";
 import { Tracker } from "../utils/Analysis";
@@ -17,9 +17,15 @@ export default class ContactInfo extends PureComponent {
 
   openQQ() {
     Tracker.send("QQ联系");
-    Linking.openURL("qq:\\741602428").catch(err =>
-      Tracker.trackError(err.stack)
-    );
+    if (Platform.OS === "ios")
+      Linking.openURL("mqq:\\741602428").catch(err =>
+        Tracker.trackError(err.stack)
+      );
+    else
+      //mqqwpa://im/chat?chat_type=wpa&uin=你的QQ号
+      Linking.openURL("mqqwpa://im/chat?chat_type=wpa&uin=741602428").catch(
+        err => Tracker.trackError(err.stack)
+      );
   }
 
   mailTo() {
@@ -31,7 +37,7 @@ export default class ContactInfo extends PureComponent {
 
   callTo() {
     Tracker.send("电话联系");
-    Linking.openURL("phone:\\13905355320").catch(err =>
+    Linking.openURL("tel:\\13905355320").catch(err =>
       Tracker.trackError(err.stack)
     );
   }

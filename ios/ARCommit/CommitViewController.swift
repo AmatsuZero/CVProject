@@ -20,8 +20,10 @@ final class CommitViewController: UIViewController {
   let backButton = UIButton(frame: CGRect(x: 30, y: 30, width: 60, height: 30))
   var commitWeekCount: Int { return (commits.count + 6)/7 }
 
-  override func loadView() {
-    super.loadView()
+  override var prefersStatusBarHidden: Bool { return true }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
     backButton.backgroundColor = .customYellow
     backButton.titleLabel?.font = .systemFont(ofSize: 15)
     backButton.setTitleColor(.white, for: .normal)
@@ -30,15 +32,20 @@ final class CommitViewController: UIViewController {
     backButton.addTarget(self,
                          action: #selector(CommitViewController.backAction(_:)),
                          for: .touchUpInside)
+    backButton.setTitle("Back", for: .normal)
     view.addSubview(backButton)
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
     scenceView.delegate = self
     scenceView.automaticallyUpdatesLighting = false
     if let data = GitHubCommitHelper.shared.fetchCommitForAR() {
       commits.append(contentsOf: data)
+    }
+  }
+
+  class func presentAR() {
+    DispatchQueue.main.async {
+      let root = UIApplication.shared.keyWindow?.rootViewController
+      let ARController = CommitViewController(nibName: nil, bundle: nil)
+      root?.present(ARController, animated: true, completion: nil)
     }
   }
 

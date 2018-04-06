@@ -34,6 +34,7 @@
 		216763ED20776B4E00AC8AB6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216763EC20776B4E00AC8AB6 /* Date+Extensions.swift */; };
 		216763EF2077730500AC8AB6 /* VisualizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216763EE2077730500AC8AB6 /* VisualizationHelper.swift */; };
 		21A7C8972077C27E003B8608 /* CVCommitScenceViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */; };
+		21A7C89A2077CF55003B8608 /* CommitARPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C8992077CF55003B8608 /* CommitARPresenter.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -452,6 +453,8 @@
 		216763EE2077730500AC8AB6 /* VisualizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationHelper.swift; sourceTree = "<group>"; };
 		21A7C8952077C27E003B8608 /* CVCommitScenceViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVCommitScenceViewManager.h; sourceTree = "<group>"; };
 		21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVCommitScenceViewManager.m; sourceTree = "<group>"; };
+		21A7C8982077CF55003B8608 /* CommitARPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitARPresenter.h; sourceTree = "<group>"; };
+		21A7C8992077CF55003B8608 /* CommitARPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitARPresenter.m; sourceTree = "<group>"; };
 		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -768,6 +771,8 @@
 				213449402077A9A200DD6EA7 /* CVCommitViewManager.m */,
 				21A7C8952077C27E003B8608 /* CVCommitScenceViewManager.h */,
 				21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */,
+				21A7C8982077CF55003B8608 /* CommitARPresenter.h */,
+				21A7C8992077CF55003B8608 /* CommitARPresenter.m */,
 				2167636220772FA600AC8AB6 /* CommitViewController.xib */,
 			);
 			path = ARCommit;
@@ -1518,6 +1523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				216763EF2077730500AC8AB6 /* VisualizationHelper.swift in Sources */,
+				21A7C89A2077CF55003B8608 /* CommitARPresenter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				2167635520772F2C00AC8AB6 /* ScenceKit+Extensions.swift in Sources */,
 				21A7C8972077C27E003B8608 /* CVCommitScenceViewManager.m in Sources */,
