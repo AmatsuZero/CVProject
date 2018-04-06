@@ -67,4 +67,10 @@
 }
 
 
+-(void)testFetchCommits {
+  NSURL *url = [NSURL URLWithString:@"https://github.com/users/AmatsuZero/contributions"];
+  NSString *webData= [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+  NSLog(@"%@", webData);
+}
+
 @end

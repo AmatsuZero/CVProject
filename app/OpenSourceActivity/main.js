@@ -1,36 +1,70 @@
 import React, { PureComponent } from "react";
-import { Platform, StyleSheet, Text, View, WebView } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  WebView,
+  TouchableOpacity
+} from "react-native";
+import Icon from "react-native-vector-icons/Foundation";
 import { remToPixel } from "../utils/Convertor";
 import Table from "./Table";
 import { TitleColors } from "../utils/ProjectColors";
+import { CommitImageView, CommitSceneView } from "./CommitImageView";
 
 export default class Github extends PureComponent {
   constructor() {
     super();
-    this.webView = null;
-  }
-
-  setWebViewRef(ref) {
-    this.webView = ref;
+    this.state = {
+      isSceneView: false
+    };
   }
 
   render() {
     return (
       <View style={Styles.main}>
         <Text style={Styles.title}>Github:</Text>
-        <WebView
-          ref={ref => this.setWebViewRef(ref)}
-          style={Styles.heatMap}
-          scalesPageToFit
-          automaticallyAdjustContentInsets
-          source={{ uri: "http://ghchart.rshah.org/AmatsuZero" }}
-          onLoad={() => {
-            const script = "document.body.style.zoom = 1.5;";
-            if (Platform.OS === "ios" && this.webView) {
-              this.webView.injectJavaScript(script);
-            }
-          }}
-        />
+        {Platform.OS === "ios" ? (
+          <View>
+            {this.state.isSceneView ? (
+              <CommitSceneView style={Styles.heatMap3D} />
+            ) : (
+              <CommitImageView style={Styles.heatMap} />
+            )}
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginVertical: 10
+              }}
+            >
+              <Icon.Button
+                name="crop"
+                backgroundColor="#3b5998"
+                onPress={() =>
+                  this.setState({ isSceneView: !this.state.isSceneView })
+                }
+              >
+                {this.state.isSceneView ? "普通" : "3D"}
+              </Icon.Button>
+              <Icon.Button
+                name="camera"
+                backgroundColor="#3b5998"
+                onPress={() => {}}
+              >
+                VR查看
+              </Icon.Button>
+            </View>
+          </View>
+        ) : (
+          <WebView
+            style={Styles.heatMap}
+            scalesPageToFit
+            automaticallyAdjustContentInsets
+            source={{ uri: "http://ghchart.rshah.org/AmatsuZero" }}
+          />
+        )}
         <View style={Styles.dividingLine} />
         <Table />
       </View>
@@ -52,8 +86,12 @@ const Styles = StyleSheet.create({
   },
   heatMap: {
     flex: 1,
-    height: 100,
-    alignSelf: "stretch"
+    height: 106
+  },
+  heatMap3D: {
+    flex: 1,
+    height: 260,
+    alignSelf: "auto"
   },
   dividingLine: {
     height: 1,

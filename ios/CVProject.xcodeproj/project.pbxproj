@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -21,6 +22,18 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		213449412077A9A200DD6EA7 /* CVCommitViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 213449402077A9A200DD6EA7 /* CVCommitViewManager.m */; };
+		2167635420772F2C00AC8AB6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167635120772F2B00AC8AB6 /* UIColor+Extensions.swift */; };
+		2167635520772F2C00AC8AB6 /* ScenceKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167635220772F2B00AC8AB6 /* ScenceKit+Extensions.swift */; };
+		2167635D20772F7800AC8AB6 /* GithubCommitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167635B20772F7800AC8AB6 /* GithubCommitHelper.swift */; };
+		2167635E20772F7800AC8AB6 /* GithubCommitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167635C20772F7800AC8AB6 /* GithubCommitData.swift */; };
+		2167636320772FA600AC8AB6 /* CommitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167636120772FA600AC8AB6 /* CommitViewController.swift */; };
+		2167636420772FA600AC8AB6 /* CommitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2167636220772FA600AC8AB6 /* CommitViewController.xib */; };
+		21676379207750D500AC8AB6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21676378207750D500AC8AB6 /* UIViewController+Extensions.swift */; };
+		216763A82077546E00AC8AB6 /* Media.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 216763A72077546D00AC8AB6 /* Media.scnassets */; };
+		216763ED20776B4E00AC8AB6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216763EC20776B4E00AC8AB6 /* Date+Extensions.swift */; };
+		216763EF2077730500AC8AB6 /* VisualizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216763EE2077730500AC8AB6 /* VisualizationHelper.swift */; };
+		21A7C8972077C27E003B8608 /* CVCommitScenceViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -425,6 +438,21 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CVProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CVProject/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2134493F2077A9A200DD6EA7 /* CVCommitViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVCommitViewManager.h; sourceTree = "<group>"; };
+		213449402077A9A200DD6EA7 /* CVCommitViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVCommitViewManager.m; sourceTree = "<group>"; };
+		2167635120772F2B00AC8AB6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		2167635220772F2B00AC8AB6 /* ScenceKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScenceKit+Extensions.swift"; sourceTree = "<group>"; };
+		2167635B20772F7800AC8AB6 /* GithubCommitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubCommitHelper.swift; sourceTree = "<group>"; };
+		2167635C20772F7800AC8AB6 /* GithubCommitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubCommitData.swift; sourceTree = "<group>"; };
+		2167636120772FA600AC8AB6 /* CommitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewController.swift; sourceTree = "<group>"; };
+		2167636220772FA600AC8AB6 /* CommitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitViewController.xib; sourceTree = "<group>"; };
+		21676378207750D500AC8AB6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		216763A72077546D00AC8AB6 /* Media.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Media.scnassets; sourceTree = "<group>"; };
+		216763EC20776B4E00AC8AB6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		216763EE2077730500AC8AB6 /* VisualizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationHelper.swift; sourceTree = "<group>"; };
+		21A7C8952077C27E003B8608 /* CVCommitScenceViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVCommitScenceViewManager.h; sourceTree = "<group>"; };
+		21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVCommitScenceViewManager.m; sourceTree = "<group>"; };
+		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2AF3A16BEB104D62963AC7C1 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -623,10 +651,14 @@
 		13B07FAE1A68108700A75B9A /* CVProject */ = {
 			isa = PBXGroup;
 			children = (
+				2167635A20772F6A00AC8AB6 /* ARCommit */,
+				2167635020772F1700AC8AB6 /* Extensions */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				216763A72077546D00AC8AB6 /* Media.scnassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -712,6 +744,33 @@
 				214FCDE72071D0DC00679353 /* RCTWeChatTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2167635020772F1700AC8AB6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2167635220772F2B00AC8AB6 /* ScenceKit+Extensions.swift */,
+				2167635120772F2B00AC8AB6 /* UIColor+Extensions.swift */,
+				21676378207750D500AC8AB6 /* UIViewController+Extensions.swift */,
+				216763EC20776B4E00AC8AB6 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2167635A20772F6A00AC8AB6 /* ARCommit */ = {
+			isa = PBXGroup;
+			children = (
+				2167635C20772F7800AC8AB6 /* GithubCommitData.swift */,
+				2167635B20772F7800AC8AB6 /* GithubCommitHelper.swift */,
+				2167636120772FA600AC8AB6 /* CommitViewController.swift */,
+				216763EE2077730500AC8AB6 /* VisualizationHelper.swift */,
+				2134493F2077A9A200DD6EA7 /* CVCommitViewManager.h */,
+				213449402077A9A200DD6EA7 /* CVCommitViewManager.m */,
+				21A7C8952077C27E003B8608 /* CVCommitScenceViewManager.h */,
+				21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */,
+				2167636220772FA600AC8AB6 /* CommitViewController.xib */,
+			);
+			path = ARCommit;
 			sourceTree = "<group>";
 		};
 		21B66C432073245A006897BB /* Products */ = {
@@ -939,6 +998,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = TCU9L9SQC4;
+						LastSwiftMigration = 940;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1385,7 +1445,9 @@
 				4EBD72F4E58648F08B797FE4 /* Feather.ttf in Resources */,
 				B3BDEB8EB15A4672810CC666 /* FontAwesome.ttf in Resources */,
 				64891F8DDBC547E784A1297A /* Foundation.ttf in Resources */,
+				2167636420772FA600AC8AB6 /* CommitViewController.xib in Resources */,
 				BBBBCC3A8BF148A888733476 /* Ionicons.ttf in Resources */,
+				216763A82077546E00AC8AB6 /* Media.scnassets in Resources */,
 				B50270FFC52649979518EE50 /* MaterialCommunityIcons.ttf in Resources */,
 				ECD4CF9C87444748A57AC50B /* MaterialIcons.ttf in Resources */,
 				CC7B01414CFD402E8929B452 /* Octicons.ttf in Resources */,
@@ -1455,8 +1517,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216763EF2077730500AC8AB6 /* VisualizationHelper.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				2167635520772F2C00AC8AB6 /* ScenceKit+Extensions.swift in Sources */,
+				21A7C8972077C27E003B8608 /* CVCommitScenceViewManager.m in Sources */,
+				216763ED20776B4E00AC8AB6 /* Date+Extensions.swift in Sources */,
+				2167635420772F2C00AC8AB6 /* UIColor+Extensions.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				213449412077A9A200DD6EA7 /* CVCommitViewManager.m in Sources */,
+				21676379207750D500AC8AB6 /* UIViewController+Extensions.swift in Sources */,
+				2167636320772FA600AC8AB6 /* CommitViewController.swift in Sources */,
+				2167635D20772F7800AC8AB6 /* GithubCommitHelper.swift in Sources */,
+				2167635E20772F7800AC8AB6 /* GithubCommitData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,6 +1580,7 @@
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1549,6 +1622,7 @@
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
@@ -1588,6 +1662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
@@ -1605,13 +1680,18 @@
 					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = CVProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = CVProject;
+				SWIFT_OBJC_BRIDGING_HEADER = "CVProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1620,6 +1700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1636,13 +1717,17 @@
 					"$(SRCROOT)/../node_modules/react-native-update/ios/RCTHotUpdate/**",
 				);
 				INFOPLIST_FILE = CVProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = CVProject;
+				SWIFT_OBJC_BRIDGING_HEADER = "CVProject-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1656,6 +1741,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				ENABLE_TESTABILITY = YES;
@@ -1688,9 +1775,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CVProject-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1703,6 +1791,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
@@ -1735,9 +1825,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CVProject-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
