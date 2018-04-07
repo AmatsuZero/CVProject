@@ -32,7 +32,7 @@ export default class BriefIntroductionTable extends PureComponent {
           Binding。
         </Text>
         <Text style={Styles.tail}>
-          县寻觅一份iOS全职工作，也可以根据具体情况考虑其他相关岗位。
+          现寻觅一份iOS全职工作，也可以根据具体情况考虑其他相关岗位。
         </Text>
       </View>
     );
