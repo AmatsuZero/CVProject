@@ -54,7 +54,7 @@ buck-out/
 fastlane/README.md
 fastlane/report.xml
 
-# config.js
+# generataConfig.js
 config.js
 
 #热更新
@@ -65,3 +65,4 @@ config.js
 .env.default
 .webenv
 servers.json
+icon.png

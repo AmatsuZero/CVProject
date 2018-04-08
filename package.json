@@ -8,12 +8,14 @@
     "test": "jest",
     "lint": "eslint ./app",
     "server": "nodemon ./server/index.js",
-    "postinstall": "node ./tasks/configGenerate && react-native link",
+    "postinstall": "node ./tasks/generataConfig && react-native link",
     "update_login": "pushy login",
     "storybook": "storybook start -p 7007",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "generateIcon": "node ./tasks/icon"
   },
   "dependencies": {
+    "convert-svg-to-png": "^0.4.0",
     "dotenv": "^5.0.1",
     "isomorphic-fetch": "^2.2.1",
     "koa": "^2.5.0",
@@ -41,7 +43,9 @@
     "react-native-vector-icons": "^4.5.0",
     "react-native-wechat": "^1.9.9",
     "rimraf": "^2.6.2",
-    "silly-datetime": "^0.1.2"
+    "silly-datetime": "^0.1.2",
+    "svg-to-img": "^2.0.7",
+    "text-to-svg": "^3.1.3"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.0",
