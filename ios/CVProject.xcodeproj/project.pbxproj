@@ -43,7 +43,9 @@
 		21A7C9DC207B0749003B8608 /* ARCamera+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9DB207B0749003B8608 /* ARCamera+Extensions.swift */; };
 		21A7C9DE207B07A4003B8608 /* ARSCNView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9DD207B07A4003B8608 /* ARSCNView+Extensions.swift */; };
 		21A7C9E0207B08EB003B8608 /* SCNPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9DF207B08EB003B8608 /* SCNPlane.swift */; };
-		21A7C9E5207B0AD8003B8608 /* PointInCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9E4207B0AD8003B8608 /* PointInCircle.m */; };
+		21A7C9E9207B1553003B8608 /* NSObject+MockKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9E8207B1553003B8608 /* NSObject+MockKVO.m */; };
+		21A7C9EB207B20CC003B8608 /* Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9EA207B20CC003B8608 /* Foundation.m */; };
+		21A7C9EF207B2194003B8608 /* PointInCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9EE207B2194003B8608 /* PointInCircle.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -472,8 +474,10 @@
 		21A7C9DB207B0749003B8608 /* ARCamera+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCamera+Extensions.swift"; sourceTree = "<group>"; };
 		21A7C9DD207B07A4003B8608 /* ARSCNView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+Extensions.swift"; sourceTree = "<group>"; };
 		21A7C9DF207B08EB003B8608 /* SCNPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNPlane.swift; sourceTree = "<group>"; };
-		21A7C9E3207B0AD8003B8608 /* PointInCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointInCircle.h; sourceTree = "<group>"; };
-		21A7C9E4207B0AD8003B8608 /* PointInCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointInCircle.m; sourceTree = "<group>"; };
+		21A7C9E7207B1553003B8608 /* NSObject+MockKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MockKVO.h"; sourceTree = "<group>"; };
+		21A7C9E8207B1553003B8608 /* NSObject+MockKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MockKVO.m"; sourceTree = "<group>"; };
+		21A7C9EA207B20CC003B8608 /* Foundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foundation.m; sourceTree = "<group>"; };
+		21A7C9EE207B2194003B8608 /* PointInCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointInCircle.m; sourceTree = "<group>"; };
 		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -818,8 +822,7 @@
 		21A7C9E2207B0AB3003B8608 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				21A7C9E3207B0AD8003B8608 /* PointInCircle.h */,
-				21A7C9E4207B0AD8003B8608 /* PointInCircle.m */,
+				21A7C9EE207B2194003B8608 /* PointInCircle.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -827,6 +830,9 @@
 		21A7C9E6207B0EED003B8608 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				21A7C9E7207B1553003B8608 /* NSObject+MockKVO.h */,
+				21A7C9E8207B1553003B8608 /* NSObject+MockKVO.m */,
+				21A7C9EA207B20CC003B8608 /* Foundation.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1567,8 +1573,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A7C9E9207B1553003B8608 /* NSObject+MockKVO.m in Sources */,
 				00E356F31AD99517003FC87E /* CVProjectTests.m in Sources */,
-				21A7C9E5207B0AD8003B8608 /* PointInCircle.m in Sources */,
+				21A7C9EF207B2194003B8608 /* PointInCircle.m in Sources */,
+				21A7C9EB207B20CC003B8608 /* Foundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
