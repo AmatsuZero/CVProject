@@ -22,6 +22,5 @@ const SVG = textToSVG.getSVG(process.env.lastName, {
     width: rawSize,
     height: rawSize
   });
-
   writeFile("icon.png", image);
 })();

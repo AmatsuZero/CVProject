@@ -66,11 +66,4 @@
   XCTAssertTrue(foundElement, @"Couldn't find element with text '%@' in %d seconds", TEXT_TO_LOOK_FOR, TIMEOUT_SECONDS);
 }
 
-
--(void)testFetchCommits {
-  NSURL *url = [NSURL URLWithString:@"https://github.com/users/AmatsuZero/contributions"];
-  NSString *webData= [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-  NSLog(@"%@", webData);
-}
-
 @end

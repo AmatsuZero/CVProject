@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -34,6 +35,15 @@
 		216763EF2077730500AC8AB6 /* VisualizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216763EE2077730500AC8AB6 /* VisualizationHelper.swift */; };
 		21A7C8972077C27E003B8608 /* CVCommitScenceViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */; };
 		21A7C89A2077CF55003B8608 /* CommitARPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C8992077CF55003B8608 /* CommitARPresenter.m */; };
+		21A7C969207A1553003B8608 /* Collections+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C968207A1553003B8608 /* Collections+Extensions.swift */; };
+		21A7C96B207A15E1003B8608 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C96A207A15E1003B8608 /* SCNNode+Extensions.swift */; };
+		21A7C96D207A1635003B8608 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C96C207A1635003B8608 /* SCNVector3+Extensions.swift */; };
+		21A7C96F207A17BA003B8608 /* CGValue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C96E207A17BA003B8608 /* CGValue+Extensions.swift */; };
+		21A7C9DA207B0550003B8608 /* ARText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9D9207B0550003B8608 /* ARText.swift */; };
+		21A7C9DC207B0749003B8608 /* ARCamera+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9DB207B0749003B8608 /* ARCamera+Extensions.swift */; };
+		21A7C9DE207B07A4003B8608 /* ARSCNView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9DD207B07A4003B8608 /* ARSCNView+Extensions.swift */; };
+		21A7C9E0207B08EB003B8608 /* SCNPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9DF207B08EB003B8608 /* SCNPlane.swift */; };
+		21A7C9E5207B0AD8003B8608 /* PointInCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9E4207B0AD8003B8608 /* PointInCircle.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -454,6 +464,16 @@
 		21A7C8962077C27E003B8608 /* CVCommitScenceViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVCommitScenceViewManager.m; sourceTree = "<group>"; };
 		21A7C8982077CF55003B8608 /* CommitARPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitARPresenter.h; sourceTree = "<group>"; };
 		21A7C8992077CF55003B8608 /* CommitARPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitARPresenter.m; sourceTree = "<group>"; };
+		21A7C968207A1553003B8608 /* Collections+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collections+Extensions.swift"; sourceTree = "<group>"; };
+		21A7C96A207A15E1003B8608 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		21A7C96C207A1635003B8608 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		21A7C96E207A17BA003B8608 /* CGValue+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGValue+Extensions.swift"; sourceTree = "<group>"; };
+		21A7C9D9207B0550003B8608 /* ARText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARText.swift; sourceTree = "<group>"; };
+		21A7C9DB207B0749003B8608 /* ARCamera+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCamera+Extensions.swift"; sourceTree = "<group>"; };
+		21A7C9DD207B07A4003B8608 /* ARSCNView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+Extensions.swift"; sourceTree = "<group>"; };
+		21A7C9DF207B08EB003B8608 /* SCNPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNPlane.swift; sourceTree = "<group>"; };
+		21A7C9E3207B0AD8003B8608 /* PointInCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointInCircle.h; sourceTree = "<group>"; };
+		21A7C9E4207B0AD8003B8608 /* PointInCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointInCircle.m; sourceTree = "<group>"; };
 		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -616,6 +636,8 @@
 		00E356EF1AD99517003FC87E /* CVProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				21A7C9E6207B0EED003B8608 /* Foundation */,
+				21A7C9E2207B0AB3003B8608 /* UIKit */,
 				00E356F21AD99517003FC87E /* CVProjectTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
@@ -653,6 +675,7 @@
 		13B07FAE1A68108700A75B9A /* CVProject */ = {
 			isa = PBXGroup;
 			children = (
+				21A7C9A9207B04D0003B8608 /* ARBaiscInfo */,
 				2167635A20772F6A00AC8AB6 /* ARCommit */,
 				2167635020772F1700AC8AB6 /* Extensions */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -755,6 +778,13 @@
 				2167635120772F2B00AC8AB6 /* UIColor+Extensions.swift */,
 				21676378207750D500AC8AB6 /* UIViewController+Extensions.swift */,
 				216763EC20776B4E00AC8AB6 /* Date+Extensions.swift */,
+				21A7C968207A1553003B8608 /* Collections+Extensions.swift */,
+				21A7C96A207A15E1003B8608 /* SCNNode+Extensions.swift */,
+				21A7C96C207A1635003B8608 /* SCNVector3+Extensions.swift */,
+				21A7C96E207A17BA003B8608 /* CGValue+Extensions.swift */,
+				21A7C9DB207B0749003B8608 /* ARCamera+Extensions.swift */,
+				21A7C9DD207B07A4003B8608 /* ARSCNView+Extensions.swift */,
+				21A7C9DF207B08EB003B8608 /* SCNPlane.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -775,6 +805,30 @@
 				2167636220772FA600AC8AB6 /* CommitViewController.xib */,
 			);
 			path = ARCommit;
+			sourceTree = "<group>";
+		};
+		21A7C9A9207B04D0003B8608 /* ARBaiscInfo */ = {
+			isa = PBXGroup;
+			children = (
+				21A7C9D9207B0550003B8608 /* ARText.swift */,
+			);
+			path = ARBaiscInfo;
+			sourceTree = "<group>";
+		};
+		21A7C9E2207B0AB3003B8608 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				21A7C9E3207B0AD8003B8608 /* PointInCircle.h */,
+				21A7C9E4207B0AD8003B8608 /* PointInCircle.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		21A7C9E6207B0EED003B8608 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		21B66C432073245A006897BB /* Products */ = {
@@ -1514,6 +1568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* CVProjectTests.m in Sources */,
+				21A7C9E5207B0AD8003B8608 /* PointInCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1523,17 +1578,25 @@
 			files = (
 				216763EF2077730500AC8AB6 /* VisualizationHelper.swift in Sources */,
 				21A7C89A2077CF55003B8608 /* CommitARPresenter.m in Sources */,
+				21A7C9DE207B07A4003B8608 /* ARSCNView+Extensions.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				2167635520772F2C00AC8AB6 /* ScenceKit+Extensions.swift in Sources */,
 				21A7C8972077C27E003B8608 /* CVCommitScenceViewManager.m in Sources */,
+				21A7C969207A1553003B8608 /* Collections+Extensions.swift in Sources */,
 				216763ED20776B4E00AC8AB6 /* Date+Extensions.swift in Sources */,
+				21A7C9E0207B08EB003B8608 /* SCNPlane.swift in Sources */,
+				21A7C96B207A15E1003B8608 /* SCNNode+Extensions.swift in Sources */,
 				2167635420772F2C00AC8AB6 /* UIColor+Extensions.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				213449412077A9A200DD6EA7 /* CVCommitViewManager.m in Sources */,
+				21A7C96D207A1635003B8608 /* SCNVector3+Extensions.swift in Sources */,
 				21676379207750D500AC8AB6 /* UIViewController+Extensions.swift in Sources */,
 				2167636320772FA600AC8AB6 /* CommitViewController.swift in Sources */,
+				21A7C96F207A17BA003B8608 /* CGValue+Extensions.swift in Sources */,
 				2167635D20772F7800AC8AB6 /* GithubCommitHelper.swift in Sources */,
+				21A7C9DC207B0749003B8608 /* ARCamera+Extensions.swift in Sources */,
 				2167635E20772F7800AC8AB6 /* GithubCommitData.swift in Sources */,
+				21A7C9DA207B0550003B8608 /* ARText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SceneKit
 
-class VisualizationHelper {
+final class VisualizationHelper {
 
   static let shared = VisualizationHelper()
 
