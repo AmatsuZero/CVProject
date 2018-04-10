@@ -1,7 +1,26 @@
-import { requireNativeComponent, NativeModules } from "react-native";
+import React, { PureComponent } from "react";
+import {
+  requireNativeComponent,
+  UIManager,
+  findNodeHandle,
+  View
+} from "react-native";
 
 const CommitImageView = requireNativeComponent("CommitImageView", null);
 const CommitSceneView = requireNativeComponent("CommitSceneView", null);
-const ARPresenter = NativeModules.ARPresenter;
+const ARPresenter = requireNativeComponent("ARPresenter", null);
 
-export { CommitImageView, CommitSceneView, ARPresenter };
+class Presenter extends PureComponent {
+  presentAR() {
+    UIManager.dispatchViewManagerCommand(
+      findNodeHandle(this),
+      UIManager.ARPresenter.Commands.presentAR,
+      null
+    );
+  }
+  render() {
+    return <ARPresenter />;
+  }
+}
+
+export { CommitImageView, CommitSceneView, Presenter };

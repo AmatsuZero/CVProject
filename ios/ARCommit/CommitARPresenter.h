@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import <React/RCTBridgeModule.h>
+#import <React/RCTViewManager.h>
 
-@interface CommitARPresenter : NSObject<RCTBridgeModule>
+@interface CommitARPresenter : RCTViewManager
 
 @end

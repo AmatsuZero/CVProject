@@ -41,14 +41,6 @@ final class CommitViewController: UIViewController {
     }
   }
 
-  class func presentAR() {
-    DispatchQueue.main.async {
-      let root = UIApplication.shared.keyWindow?.rootViewController
-      let ARController = CommitViewController(nibName: nil, bundle: nil)
-      root?.present(ARController, animated: true, completion: nil)
-    }
-  }
-
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     let configuration = ARWorldTrackingConfiguration()

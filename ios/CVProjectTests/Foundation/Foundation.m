@@ -56,7 +56,7 @@
   XCTAssertEqual(ret.integerValue, 6);
 }
 
-- (void)testMockKVO {
+- (void) testMockKVO {
   mock.text = @"Daubert";
   [self waitForExpectations:@[expection] timeout:300];
   XCTAssertTrue([observingValue isEqualToString:mock.text]);

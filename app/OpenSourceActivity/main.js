@@ -5,24 +5,24 @@ import {
   Text,
   View,
   WebView,
-  TouchableOpacity
+  TouchableOpacity,
+  UIManager,
+  findNodeHandle
 } from "react-native";
 import Icon from "react-native-vector-icons/Foundation";
 import { remToPixel } from "../utils/Convertor";
 import Table from "./Table";
 import { TitleColors } from "../utils/ProjectColors";
-import {
-  CommitImageView,
-  CommitSceneView,
-  ARPresenter
-} from "./CommitImageView";
+import { CommitImageView, CommitSceneView, Presenter } from "./CommitImageView";
 
 export default class Github extends PureComponent {
+  arRef = null;
   constructor() {
     super();
     this.state = {
       isSceneView: false
     };
+    this.arHandle = findNodeHandle(this.arRef);
   }
 
   render() {
@@ -52,13 +52,16 @@ export default class Github extends PureComponent {
               >
                 {this.state.isSceneView ? "普通" : "3D"}
               </Icon.Button>
-              <Icon.Button
-                name="camera"
-                backgroundColor="#3b5998"
-                onPress={() => ARPresenter.presnetAR()}
-              >
-                VR查看
-              </Icon.Button>
+              <View>
+                <Presenter ref={ref => (this.arRef = ref)} />
+                <Icon.Button
+                  name="camera"
+                  backgroundColor="#3b5998"
+                  onPress={() => this.arRef.presentAR()}
+                >
+                  VR查看
+                </Icon.Button>
+              </View>
             </View>
           </View>
         ) : (
