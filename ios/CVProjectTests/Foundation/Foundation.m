@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSObject+MockKVO.h"
+#import "NSObject+MultiArgs.h"
 
 @interface MockClass: NSObject
 
@@ -31,6 +32,7 @@
 }
 
 -(void)setUp {
+  [super setUp];
   mock = [MockClass new];
   expection = [[XCTestExpectation alloc] initWithDescription:@"KVO Mock"];
   [mock mock_addObserver:self forKey:@"text" withBlock:^(id observedValue, NSString *observedKey, id oldValue, id newValue) {
@@ -40,7 +42,18 @@
 }
 
 -(void)tearDown {
+  [super tearDown];
   [mock mock_removeObserver:self forKey:@"text"];
+}
+
+-(NSNumber*)threeSumWithA:(NSNumber*) A B:(NSNumber*)B C:(NSNumber*)C {
+  return @(A.integerValue+B.integerValue+C.integerValue);
+}
+
+// JD Interview
+- (void) testPerformSelectorWithMultiArgs {
+  NSNumber* ret = [self performSelector:@selector(threeSumWithA:B:C:) withObjects:@[@1,@2,@3]];
+  XCTAssertEqual(ret.integerValue, 6);
 }
 
 - (void)testMockKVO {

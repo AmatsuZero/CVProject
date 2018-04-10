@@ -46,6 +46,9 @@
 		21A7C9E9207B1553003B8608 /* NSObject+MockKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9E8207B1553003B8608 /* NSObject+MockKVO.m */; };
 		21A7C9EB207B20CC003B8608 /* Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9EA207B20CC003B8608 /* Foundation.m */; };
 		21A7C9EF207B2194003B8608 /* PointInCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9EE207B2194003B8608 /* PointInCircle.m */; };
+		21A7C9F5207B690E003B8608 /* Tricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7C9F4207B690E003B8608 /* Tricks.swift */; };
+		21A7CA0B207BC07B003B8608 /* CVMessageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7CA0A207BC07B003B8608 /* CVMessageMock.m */; };
+		21A7CA61207C5A5E003B8608 /* NSObject+MultiArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -478,6 +481,12 @@
 		21A7C9E8207B1553003B8608 /* NSObject+MockKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MockKVO.m"; sourceTree = "<group>"; };
 		21A7C9EA207B20CC003B8608 /* Foundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foundation.m; sourceTree = "<group>"; };
 		21A7C9EE207B2194003B8608 /* PointInCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointInCircle.m; sourceTree = "<group>"; };
+		21A7C9F3207B690D003B8608 /* CVProjectTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProjectTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		21A7C9F4207B690E003B8608 /* Tricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tricks.swift; sourceTree = "<group>"; };
+		21A7CA09207BC07B003B8608 /* CVMessageMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVMessageMock.h; sourceTree = "<group>"; };
+		21A7CA0A207BC07B003B8608 /* CVMessageMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVMessageMock.m; sourceTree = "<group>"; };
+		21A7CA5F207C5A5E003B8608 /* NSObject+MultiArgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MultiArgs.h"; sourceTree = "<group>"; };
+		21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MultiArgs.m"; sourceTree = "<group>"; };
 		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -640,6 +649,7 @@
 		00E356EF1AD99517003FC87E /* CVProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				21A7C9F2207B68EC003B8608 /* TricksForSwift */,
 				21A7C9E6207B0EED003B8608 /* Foundation */,
 				21A7C9E2207B0AB3003B8608 /* UIKit */,
 				00E356F21AD99517003FC87E /* CVProjectTests.m */,
@@ -832,9 +842,22 @@
 			children = (
 				21A7C9E7207B1553003B8608 /* NSObject+MockKVO.h */,
 				21A7C9E8207B1553003B8608 /* NSObject+MockKVO.m */,
+				21A7CA09207BC07B003B8608 /* CVMessageMock.h */,
+				21A7CA0A207BC07B003B8608 /* CVMessageMock.m */,
+				21A7CA5F207C5A5E003B8608 /* NSObject+MultiArgs.h */,
+				21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */,
 				21A7C9EA207B20CC003B8608 /* Foundation.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		21A7C9F2207B68EC003B8608 /* TricksForSwift */ = {
+			isa = PBXGroup;
+			children = (
+				21A7C9F4207B690E003B8608 /* Tricks.swift */,
+				21A7C9F3207B690D003B8608 /* CVProjectTests-Bridging-Header.h */,
+			);
+			path = TricksForSwift;
 			sourceTree = "<group>";
 		};
 		21B66C432073245A006897BB /* Products */ = {
@@ -1058,6 +1081,7 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = TCU9L9SQC4;
+						LastSwiftMigration = 0930;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -1573,6 +1597,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A7CA0B207BC07B003B8608 /* CVMessageMock.m in Sources */,
+				21A7CA61207C5A5E003B8608 /* NSObject+MultiArgs.m in Sources */,
+				21A7C9F5207B690E003B8608 /* Tricks.swift in Sources */,
 				21A7C9E9207B1553003B8608 /* NSObject+MockKVO.m in Sources */,
 				00E356F31AD99517003FC87E /* CVProjectTests.m in Sources */,
 				21A7C9EF207B2194003B8608 /* PointInCircle.m in Sources */,
@@ -1658,6 +1685,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1691,6 +1719,9 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CVProjectTests/TricksForSwift/CVProjectTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVProject.app/CVProject";
 			};
 			name = Debug;
@@ -1700,6 +1731,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
 				HEADER_SEARCH_PATHS = (
@@ -1730,6 +1762,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CVProjectTests/TricksForSwift/CVProjectTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVProject.app/CVProject";
 			};
 			name = Release;
