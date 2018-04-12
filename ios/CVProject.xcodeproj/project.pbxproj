@@ -50,6 +50,7 @@
 		21A7CA0B207BC07B003B8608 /* CVMessageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7CA0A207BC07B003B8608 /* CVMessageMock.m */; };
 		21A7CA61207C5A5E003B8608 /* NSObject+MultiArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
+		21E2651C207EF99F00A8B547 /* LockPerfomance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2651B207EF99F00A8B547 /* LockPerfomance.swift */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -489,6 +490,7 @@
 		21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MultiArgs.m"; sourceTree = "<group>"; };
 		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		21E2651B207EF99F00A8B547 /* LockPerfomance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockPerfomance.swift; sourceTree = "<group>"; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2AF3A16BEB104D62963AC7C1 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2D02E47B1E0B4A5D006451C7 /* CVProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -847,6 +849,7 @@
 				21A7CA5F207C5A5E003B8608 /* NSObject+MultiArgs.h */,
 				21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */,
 				21A7C9EA207B20CC003B8608 /* Foundation.m */,
+				21E2651B207EF99F00A8B547 /* LockPerfomance.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1597,6 +1600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E2651C207EF99F00A8B547 /* LockPerfomance.swift in Sources */,
 				21A7CA0B207BC07B003B8608 /* CVMessageMock.m in Sources */,
 				21A7CA61207C5A5E003B8608 /* NSObject+MultiArgs.m in Sources */,
 				21A7C9F5207B690E003B8608 /* Tricks.swift in Sources */,
