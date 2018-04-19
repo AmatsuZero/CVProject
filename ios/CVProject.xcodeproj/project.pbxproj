@@ -51,6 +51,10 @@
 		21A7CA61207C5A5E003B8608 /* NSObject+MultiArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7CA60207C5A5E003B8608 /* NSObject+MultiArgs.m */; };
 		21B66C892073347A006897BB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B66C882073347A006897BB /* libbz2.1.0.tbd */; };
 		21E2651C207EF99F00A8B547 /* LockPerfomance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2651B207EF99F00A8B547 /* LockPerfomance.swift */; };
+		21F908F020887BCE0075647E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F908EF20887BCE0075647E /* Cocoa.framework */; };
+		21F908F320887BCE0075647E /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F908F220887BCE0075647E /* SourceEditorExtension.swift */; };
+		21F908F520887BCE0075647E /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F908F420887BCE0075647E /* SourceEditorCommand.swift */; };
+		21F9092920887C160075647E /* String+Pangu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F9092820887C160075647E /* String+Pangu.swift */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -491,6 +495,13 @@
 		21AE3BBE207721B400039BE2 /* CVProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		21B66C882073347A006897BB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		21E2651B207EF99F00A8B547 /* LockPerfomance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockPerfomance.swift; sourceTree = "<group>"; };
+		21F908EE20887BCE0075647E /* Pangu.plugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Pangu.plugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		21F908EF20887BCE0075647E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		21F908F220887BCE0075647E /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		21F908F420887BCE0075647E /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		21F908F620887BCE0075647E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21F908F720887BCE0075647E /* Pangu_plugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pangu_plugin.entitlements; sourceTree = "<group>"; };
+		21F9092820887C160075647E /* String+Pangu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Pangu.swift"; sourceTree = "<group>"; };
 		2AD84E3785D4445E93EB5C14 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2AF3A16BEB104D62963AC7C1 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2D02E47B1E0B4A5D006451C7 /* CVProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -577,6 +588,14 @@
 				AB5428A4736F4C67985D765E /* libRCTWeChat.a in Frameworks */,
 				308CD0E385B346088E08564C /* RCTWeChatTests.xctest in Frameworks */,
 				E6C2ECDC95AA4B2190E18033 /* libRCTHotUpdate.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21F908EB20887BCE0075647E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F908F020887BCE0075647E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +890,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		21F908F120887BCE0075647E /* Pangu.plugin */ = {
+			isa = PBXGroup;
+			children = (
+				21F908F220887BCE0075647E /* SourceEditorExtension.swift */,
+				21F9092820887C160075647E /* String+Pangu.swift */,
+				21F908F420887BCE0075647E /* SourceEditorCommand.swift */,
+				21F908F620887BCE0075647E /* Info.plist */,
+				21F908F720887BCE0075647E /* Pangu_plugin.entitlements */,
+			);
+			path = Pangu.plugin;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +918,7 @@
 				E7875EB1C9C14B229F49F759 /* CoreTelephony.framework */,
 				949B4FC78D4E46BDB801508F /* CoreGraphics.framework */,
 				66F9C6BD2F0C482F9CAA9187 /* TencentOpenAPI.framework */,
+				21F908EF20887BCE0075647E /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -949,6 +981,7 @@
 				13B07FAE1A68108700A75B9A /* CVProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CVProjectTests */,
+				21F908F120887BCE0075647E /* Pangu.plugin */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				214B693F206F2D1C000791E4 /* Recovered References */,
@@ -966,6 +999,7 @@
 				00E356EE1AD99517003FC87E /* CVProjectTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* CVProject-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* CVProject-tvOSTests.xctest */,
+				21F908EE20887BCE0075647E /* Pangu.plugin.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1036,6 +1070,23 @@
 			productReference = 13B07F961A680F5B00A75B9A /* CVProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		21F908ED20887BCE0075647E /* Pangu.plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21F9092720887BCE0075647E /* Build configuration list for PBXNativeTarget "Pangu.plugin" */;
+			buildPhases = (
+				21F908EA20887BCE0075647E /* Sources */,
+				21F908EB20887BCE0075647E /* Frameworks */,
+				21F908EC20887BCE0075647E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pangu.plugin;
+			productName = Pangu.plugin;
+			productReference = 21F908EE20887BCE0075647E /* Pangu.plugin.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		2D02E47A1E0B4A5D006451C7 /* CVProject-tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CVProject-tvOS" */;
@@ -1078,6 +1129,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
@@ -1090,6 +1142,11 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = TCU9L9SQC4;
 						LastSwiftMigration = 940;
+					};
+					21F908ED20887BCE0075647E = {
+						CreatedOnToolsVersion = 9.3;
+						DevelopmentTeam = TCU9L9SQC4;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1195,6 +1252,7 @@
 				00E356ED1AD99517003FC87E /* CVProjectTests */,
 				2D02E47A1E0B4A5D006451C7 /* CVProject-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* CVProject-tvOSTests */,
+				21F908ED20887BCE0075647E /* Pangu.plugin */,
 			);
 		};
 /* End PBXProject section */
@@ -1547,6 +1605,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21F908EC20887BCE0075647E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D02E4791E0B4A5D006451C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1636,6 +1701,16 @@
 				21A7C9DC207B0749003B8608 /* ARCamera+Extensions.swift in Sources */,
 				2167635E20772F7800AC8AB6 /* GithubCommitData.swift in Sources */,
 				21A7C9DA207B0550003B8608 /* ARText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21F908EA20887BCE0075647E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F908F320887BCE0075647E /* SourceEditorExtension.swift in Sources */,
+				21F9092920887C160075647E /* String+Pangu.swift in Sources */,
+				21F908F520887BCE0075647E /* SourceEditorCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1843,6 +1918,87 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "CVProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		21F908F820887BCE0075647E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Pangu.plugin/Pangu_plugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Pangu.plugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MockingBot.Pangu-plugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		21F908F920887BCE0075647E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Pangu.plugin/Pangu_plugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Pangu.plugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MockingBot.Pangu-plugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -2105,6 +2261,15 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21F9092720887BCE0075647E /* Build configuration list for PBXNativeTarget "Pangu.plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21F908F820887BCE0075647E /* Debug */,
+				21F908F920887BCE0075647E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
